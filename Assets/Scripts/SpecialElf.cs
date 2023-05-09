@@ -81,7 +81,7 @@ public class specialElf : MonoBehaviour
         StartCoroutine(flyCoroutine(new Vector2(transform.position.x, y + 0.2f)));
     }
 
-    IEnumerator flyCoroutine(Vector2 pos)
+    private IEnumerator flyCoroutine(Vector2 pos)
     {
         float morphTime = 1f;
         float elapsedTime = 0f;
