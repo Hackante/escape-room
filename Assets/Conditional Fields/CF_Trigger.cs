@@ -30,7 +30,8 @@ public class CF_Trigger : Editor
                 trigger.isScript = true;
                 break;
             case TriggerType.Animation:
-                trigger.anim = (Animation)EditorGUILayout.ObjectField("Animation:", trigger.anim, typeof(Animation), false);
+                trigger.animationObject = (GameObject)EditorGUILayout.ObjectField("Animation Object:", trigger.animationObject, typeof(GameObject), true);
+                trigger.animationName = EditorGUILayout.TextField("Animation Name:", trigger.animationName);
                 break;
         }
     }

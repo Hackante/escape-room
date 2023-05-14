@@ -19,7 +19,8 @@ public class Trigger : MonoBehaviour
     [HideInInspector] public bool musicLoop = true;
     [HideInInspector] public bool isScript = true;
     [ConditionalHide("isScript", true)] public TriggerScript script;
-    [HideInInspector] public Animation anim;
+    [HideInInspector] public GameObject animationObject;
+    [HideInInspector] public string animationName;
 
     private GameObject textField;
 
@@ -68,7 +69,7 @@ public class Trigger : MonoBehaviour
                 if (script) script.trigger();
                 break;
             case TriggerType.Animation:
-                Debug.Log(anim.name);
+                if (animationObject) animationObject.GetComponent<Animator>().Play(animationName);
                 break;
         }
     }
