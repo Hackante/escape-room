@@ -17,8 +17,10 @@ public class Trigger : MonoBehaviour
     [HideInInspector] public float soundVolume = 1f;
     [HideInInspector] public AudioClip music;
     [HideInInspector] public bool musicLoop = true;
+    [HideInInspector] public bool isScript = true;
+    [ConditionalHide("isScript", true)] public TriggerScript script;
     [HideInInspector] public Animation anim;
-    [HideInInspector] public MonoScript script;
+
     private GameObject textField;
 
     private void Start()
@@ -63,7 +65,7 @@ public class Trigger : MonoBehaviour
                 if (!musicLoop) StartCoroutine(PlayOriginalTrackAfter(music.length, originalTrack));
                 break;
             case TriggerType.Script:
-                Debug.Log(script.name);
+                if (script) script.trigger();
                 break;
             case TriggerType.Animation:
                 Debug.Log(anim.name);
@@ -114,7 +116,9 @@ public class Trigger : MonoBehaviour
             AudioSource musicSource = GameObject.Find("Music").GetComponent<AudioSource>();
             musicSource.clip = originalTrack;
             musicSource.Play();
-        } else {
+        }
+        else
+        {
             GameObject.Find("Music").GetComponent<AudioSource>().Stop();
         }
     }

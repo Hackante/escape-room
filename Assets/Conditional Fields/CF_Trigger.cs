@@ -10,6 +10,7 @@ public class CF_Trigger : Editor
     {
         base.OnInspectorGUI();
         Trigger trigger = (Trigger)target;
+        trigger.isScript = false;
         switch (trigger.getTriggerType())
         {
             case TriggerType.Text:
@@ -26,7 +27,7 @@ public class CF_Trigger : Editor
                 trigger.musicLoop = EditorGUILayout.Toggle("Loop:", trigger.musicLoop);
                 break;
             case TriggerType.Script:
-                trigger.script = (MonoScript)EditorGUILayout.ObjectField("Script:", trigger.script, typeof(MonoScript), false);
+                trigger.isScript = true;
                 break;
             case TriggerType.Animation:
                 trigger.anim = (Animation)EditorGUILayout.ObjectField("Animation:", trigger.anim, typeof(Animation), false);
