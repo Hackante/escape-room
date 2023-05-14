@@ -8,9 +8,9 @@ public class TypewriterEffect : MonoBehaviour
     [SerializeField] private float speed = 30f;
     [SerializeField] private float delay = 1f;
 
-    public void Run(string text, TMP_Text textLabel)
+    public Coroutine Run(string text, TMP_Text textLabel)
     {
-        StartCoroutine(TypeText(text, textLabel));
+        return StartCoroutine(TypeText(text, textLabel));
     }
 
     private IEnumerator TypeText(string text, TMP_Text textLabel)

@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 1599471343557785486}
   - component: {fileID: 4960711906798502647}
   m_Layer: 0
-  m_Name: Dialog
+  m_Name: Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -415,7 +415,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLabel: {fileID: 1700428388750303892}
-  text: "Omg here goes some goofy ass text\nlmao period \nlet'ssssssss goooooo"
+  dialogueObject: {fileID: 11400000, guid: 8eda953fe9ecb3b4eb650666e9d0d77b, type: 2}
+  dialogueBox: {fileID: 6842064676164438331}
+  hideUIElements:
+  - {fileID: 589177727059207162}
+  - {fileID: 5373929722378820820}
+  - {fileID: 7373320520533704803}
 --- !u!114 &4960711906798502647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1167,7 +1172,7 @@ GameObject:
   - component: {fileID: 4738115840479750284}
   - component: {fileID: 1700428388750303892}
   m_Layer: 0
-  m_Name: Dialog
+  m_Name: Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1221,11 +1226,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'New Text
-
-    New Text
-
-    New Text'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1304,7 +1305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4382182122948615681}
   m_Layer: 0
-  m_Name: DialogBox
+  m_Name: DialogueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
