@@ -16,7 +16,6 @@ public class Trigger : MonoBehaviour
     [HideInInspector] public AudioClip sound;
     [HideInInspector] public float soundVolume = 1f;
     [HideInInspector] public AudioClip music;
-    [HideInInspector] public float musicVolume = 1f;
     [HideInInspector] public bool musicLoop = true;
     [HideInInspector] public Animation anim;
     [HideInInspector] public MonoScript script;
@@ -49,13 +48,19 @@ public class Trigger : MonoBehaviour
                 break;
             case TriggerType.Sound:
                 AudioSource audio = GetComponent<AudioSource>();
-                if(!audio) audio = gameObject.AddComponent<AudioSource>();
+                if (!audio) audio = gameObject.AddComponent<AudioSource>();
                 audio.clip = sound;
                 audio.volume = soundVolume;
                 audio.Play();
                 break;
             case TriggerType.Music:
-                Debug.Log(music.name);
+                AudioSource musicSource = GameObject.Find("Music").GetComponent<AudioSource>();
+                AudioClip originalTrack = null;
+                if (!musicLoop) originalTrack = GameObject.Find("Music").GetComponent<AudioSource>().clip;
+                musicSource.clip = music;
+                musicSource.volume = PlayerPrefs.GetFloat("volume", 1f);
+                musicSource.Play();
+                if (!musicLoop) StartCoroutine(PlayOriginalTrackAfter(music.length, originalTrack));
                 break;
             case TriggerType.Script:
                 Debug.Log(script.name);
@@ -86,7 +91,8 @@ public class Trigger : MonoBehaviour
         StartCoroutine(Fade(textFadeDuration));
     }
 
-    private IEnumerator Fade(float seconds) {
+    private IEnumerator Fade(float seconds)
+    {
         float duration = seconds;
         float currentTime = 0f;
         float start = textField.GetComponent<TextMeshProUGUI>().alpha;
@@ -97,6 +103,19 @@ public class Trigger : MonoBehaviour
             textField.GetComponent<TextMeshProUGUI>().alpha = alpha;
             currentTime += Time.deltaTime;
             yield return null;
+        }
+    }
+
+    private IEnumerator PlayOriginalTrackAfter(float seconds, AudioClip originalTrack)
+    {
+        yield return new WaitForSeconds(seconds);
+        if (originalTrack)
+        {
+            AudioSource musicSource = GameObject.Find("Music").GetComponent<AudioSource>();
+            musicSource.clip = originalTrack;
+            musicSource.Play();
+        } else {
+            GameObject.Find("Music").GetComponent<AudioSource>().Stop();
         }
     }
 }

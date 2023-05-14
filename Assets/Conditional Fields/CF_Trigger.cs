@@ -23,7 +23,6 @@ public class CF_Trigger : Editor
                 break;
             case TriggerType.Music:
                 trigger.music = (AudioClip)EditorGUILayout.ObjectField("Music:", trigger.music, typeof(AudioClip), false);
-                trigger.musicVolume = EditorGUILayout.Slider("Volume:", trigger.musicVolume, 0f, 1f);
                 trigger.musicLoop = EditorGUILayout.Toggle("Loop:", trigger.musicLoop);
                 break;
             case TriggerType.Script:
