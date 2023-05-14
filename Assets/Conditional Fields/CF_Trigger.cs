@@ -19,9 +19,12 @@ public class CF_Trigger : Editor
                 break;
             case TriggerType.Sound:
                 trigger.sound = (AudioClip)EditorGUILayout.ObjectField("Sound:", trigger.sound, typeof(AudioClip), false);
+                trigger.soundVolume = EditorGUILayout.Slider("Volume:", trigger.soundVolume, 0f, 1f);
                 break;
             case TriggerType.Music:
                 trigger.music = (AudioClip)EditorGUILayout.ObjectField("Music:", trigger.music, typeof(AudioClip), false);
+                trigger.musicVolume = EditorGUILayout.Slider("Volume:", trigger.musicVolume, 0f, 1f);
+                trigger.musicLoop = EditorGUILayout.Toggle("Loop:", trigger.musicLoop);
                 break;
             case TriggerType.Script:
                 trigger.script = (MonoScript)EditorGUILayout.ObjectField("Script:", trigger.script, typeof(MonoScript), false);

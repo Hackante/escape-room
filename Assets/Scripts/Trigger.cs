@@ -8,11 +8,16 @@ using TMPro;
 public class Trigger : MonoBehaviour
 {
     [SerializeField] private TriggerType triggerType;
+    [SerializeField] private bool triggerOnce = false;
+    private bool triggered = false;
     [HideInInspector] public string text;
     [HideInInspector] public float textShowDuration = 2f;
     [HideInInspector] public float textFadeDuration = 0.5f;
     [HideInInspector] public AudioClip sound;
+    [HideInInspector] public float soundVolume = 1f;
     [HideInInspector] public AudioClip music;
+    [HideInInspector] public float musicVolume = 1f;
+    [HideInInspector] public bool musicLoop = true;
     [HideInInspector] public Animation anim;
     [HideInInspector] public MonoScript script;
     private GameObject textField;
@@ -23,9 +28,10 @@ public class Trigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && !triggered)
         {
             trigger();
+            if (triggerOnce) triggered = true;
         }
     }
 
@@ -42,7 +48,11 @@ public class Trigger : MonoBehaviour
                 HideTextAfter(textShowDuration);
                 break;
             case TriggerType.Sound:
-                Debug.Log(sound.name);
+                AudioSource audio = GetComponent<AudioSource>();
+                if(!audio) audio = gameObject.AddComponent<AudioSource>();
+                audio.clip = sound;
+                audio.volume = soundVolume;
+                audio.Play();
                 break;
             case TriggerType.Music:
                 Debug.Log(music.name);
