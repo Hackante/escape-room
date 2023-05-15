@@ -21,3 +21,8 @@ MonoBehaviour:
     HAHahAH
 
     hahAHHA'
+  responses:
+  - responseText: Yes
+    dialogueObject: {fileID: 11400000, guid: 68e7aa908188fbd44b729b7d6555af6b, type: 2}
+  - responseText: No
+    dialogueObject: {fileID: 11400000, guid: 73665fc669e482c4b8675eb5ec799215, type: 2}
