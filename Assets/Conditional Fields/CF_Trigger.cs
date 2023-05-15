@@ -1,4 +1,4 @@
-
+#if UNITY_EDITOR
 using UnityEditor;
 using Enums;
 using UnityEngine;
@@ -39,3 +39,4 @@ public class CF_Trigger : Editor
         }
     }
 }
+#endif

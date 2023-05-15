@@ -1,13 +1,14 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-using UnityEngine.UI;
 
 public class DialogueUI : MonoBehaviour
 {
     [SerializeField] TMP_Text textLabel;
-    [SerializeField] private DialogueObject dialogueObject;
     [SerializeField] private GameObject dialogueBox;
+
+    public bool IsOpen { get; private set; }
+
     private TypewriterEffect typewriterEffect;
     private ResponseHandler responseHandler;
     [SerializeField] private GameObject[] hideUIElements;
@@ -17,11 +18,11 @@ public class DialogueUI : MonoBehaviour
         typewriterEffect = GetComponent<TypewriterEffect>();
         responseHandler = GetComponent<ResponseHandler>();
         CloseDialogue();
-        //ShowDialogue(dialogueObject);
     }
 
     public void ShowDialogue(DialogueObject dialogueObject)
     {
+        IsOpen = true;
         dialogueBox.SetActive(true);
         HideOtherUI();
         StartCoroutine(StepThroughDialogue(dialogueObject));
@@ -50,6 +51,7 @@ public class DialogueUI : MonoBehaviour
 
     public void CloseDialogue()
     {
+        IsOpen = false;
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;
         ShowOtherUI();

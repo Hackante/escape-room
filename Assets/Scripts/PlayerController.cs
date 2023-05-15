@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float collisionOffset = 0.1f;
     [SerializeField] ContactFilter2D movementFilter;
 
+    [SerializeField] private DialogueUI dialogueUI;
+    public DialogueUI DialogueUI { get => dialogueUI; }
+    public IInteractable Interactable { get; set; }
+
+
     // Movement
     Vector2 movementInput;
     Rigidbody2D rb;
@@ -29,6 +34,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(dialogueUI.IsOpen) return;
         if (movementInput != Vector2.zero)
         {
             bool moved = tryMove(movementInput);
@@ -75,9 +81,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void Interact()
+    {
+        GetComponent<Animator>().SetBool("isMoving", false);
+        Interactable?.Interact(this);
+    }
+
     private bool tryMove(Vector2 direction)
     {
-        if(direction == Vector2.zero) return false;
+        if (direction == Vector2.zero) return false;
         // Check for potential collisions
         int count = rb.Cast(direction, movementFilter, castCollisions, movementSpeed * Time.fixedDeltaTime + collisionOffset);
         if (count == 0)
@@ -93,19 +105,23 @@ public class PlayerController : MonoBehaviour
         movementInput = movementValue.Get<Vector2>();
     }
 
-    public void moveUp() {
+    public void moveUp()
+    {
         movementInput = new Vector2(0, 1);
     }
 
-    public void moveDown() {
+    public void moveDown()
+    {
         movementInput = new Vector2(0, -1);
     }
 
-    public void moveLeft() {
+    public void moveLeft()
+    {
         movementInput = new Vector2(-1, 0);
     }
 
-    public void moveRight() {
+    public void moveRight()
+    {
         movementInput = new Vector2(1, 0);
     }
 
