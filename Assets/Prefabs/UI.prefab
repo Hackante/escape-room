@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 7304167076145148010}
   - component: {fileID: 9153191107794384941}
   - component: {fileID: 1506200441506514116}
-  - component: {fileID: 1599471343557785486}
+  - component: {fileID: 4835290157110272635}
   - component: {fileID: 4960711906798502647}
   - component: {fileID: 1708267910088379868}
   m_Layer: 0
@@ -440,7 +440,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1599471343557785486
+--- !u!114 &4835290157110272635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -457,9 +457,8 @@ MonoBehaviour:
   dialogueBox: {fileID: 6842064676164438331}
   hideUIElements:
   - {fileID: 589177727059207162}
-  - {fileID: 5373929722378820820}
   - {fileID: 7373320520533704803}
-  fadeDuration: 1
+  - {fileID: 5373929722378820820}
 --- !u!114 &4960711906798502647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,7 +1310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

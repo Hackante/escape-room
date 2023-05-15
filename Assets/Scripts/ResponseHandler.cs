@@ -9,13 +9,13 @@ public class ResponseHandler : MonoBehaviour
     [SerializeField] private RectTransform responseButtonTemplate;
     [SerializeField] private RectTransform responseContainer;
 
-    private DialogUI dialogUI;
+    private DialogueUI dialogUI;
 
     List<GameObject> responseButtons = new List<GameObject>();
 
     private void Start()
     {
-        dialogUI = GetComponent<DialogUI>();
+        dialogUI = GetComponent<DialogueUI>();
     }
 
     public void ShowResponses(Response[] responses) {

@@ -3,7 +3,7 @@ using TMPro;
 using System.Collections;
 using UnityEngine.UI;
 
-public class DialogUI : MonoBehaviour
+public class DialogueUI : MonoBehaviour
 {
     [SerializeField] TMP_Text textLabel;
     [SerializeField] private DialogueObject dialogueObject;
@@ -11,22 +11,20 @@ public class DialogUI : MonoBehaviour
     private TypewriterEffect typewriterEffect;
     private ResponseHandler responseHandler;
     [SerializeField] private GameObject[] hideUIElements;
-    [SerializeField] private float fadeDuration = 1f;
 
     private void Start()
     {
         typewriterEffect = GetComponent<TypewriterEffect>();
         responseHandler = GetComponent<ResponseHandler>();
         CloseDialogue();
-        ShowDialogue(dialogueObject);
+        //ShowDialogue(dialogueObject);
     }
 
     public void ShowDialogue(DialogueObject dialogueObject)
     {
         dialogueBox.SetActive(true);
         HideOtherUI();
-        if (dialogueBox.GetComponentInChildren<Image>().color.a == 0) StartCoroutine(Fade(dialogueObject));
-        else StartCoroutine(StepThroughDialogue(dialogueObject));
+        StartCoroutine(StepThroughDialogue(dialogueObject));
     }
 
     private IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
@@ -54,34 +52,7 @@ public class DialogUI : MonoBehaviour
     {
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;
-        StartCoroutine(Fade());
         ShowOtherUI();
-    }
-
-    private IEnumerator Fade()
-    {
-        yield return StartCoroutine(FadeRoutine());
-    }
-
-    private IEnumerator Fade(DialogueObject dialogueObject)
-    {
-        yield return StartCoroutine(FadeRoutine());
-        StartCoroutine(StepThroughDialogue(dialogueObject));
-    }
-
-    private IEnumerator FadeRoutine()
-    {
-        float duration = fadeDuration;
-        float currentTime = 0f;
-        float start = dialogueBox.GetComponentInChildren<Image>().color.a;
-        float end = start == 0 ? 1 : 0;
-        while (currentTime < duration)
-        {
-            float alpha = Mathf.Lerp(start, end, currentTime / duration);
-            dialogueBox.GetComponentInChildren<Image>().color = new Color(1, 1, 1, alpha);
-            currentTime += Time.deltaTime;
-            yield return null;
-        }
     }
 
     private void HideOtherUI()
@@ -100,3 +71,4 @@ public class DialogUI : MonoBehaviour
         }
     }
 }
+

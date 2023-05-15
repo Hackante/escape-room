@@ -19,6 +19,7 @@ namespace Enums
         Sound,
         Music,
         Script,
-        Animation
+        Animation,
+        Dialogue
     }
 }

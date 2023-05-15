@@ -15,6 +15,7 @@ public class CF_Trigger : Editor
         trigger.isSound = false;
         trigger.isMusic = false;
         trigger.isAnimation = false;
+        trigger.isDialogue = false;
         switch (trigger.getTriggerType())
         {
             case TriggerType.Text:
@@ -31,6 +32,9 @@ public class CF_Trigger : Editor
                 break;
             case TriggerType.Animation:
                 trigger.isAnimation = true;
+                break;
+            case TriggerType.Dialogue:
+                trigger.isDialogue = true;
                 break;
         }
     }

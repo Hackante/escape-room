@@ -12,6 +12,7 @@ public class Trigger : MonoBehaviour
     [HideInInspector] public bool isSound = false;
     [HideInInspector] public bool isMusic = false;
     [HideInInspector] public bool isAnimation = false;
+    [HideInInspector] public bool isDialogue = false;
 
     [SerializeField] private TriggerType triggerType;
     [SerializeField] private bool triggerOnce = false;
@@ -26,6 +27,8 @@ public class Trigger : MonoBehaviour
     [ConditionalHide("isScript", true)] public TriggerScript script;
     [ConditionalHide("isAnimation", true)] public GameObject animationObject;
     [ConditionalHide("isAnimation", true)] public string animationName;
+    [ConditionalHide("isDialogue", true)] public DialogueObject dialogueObject;
+
 
     private GameObject textField;
 
@@ -71,6 +74,9 @@ public class Trigger : MonoBehaviour
                 break;
             case TriggerType.Animation:
                 if (animationObject) animationObject.GetComponent<Animator>().Play(animationName);
+                break;
+            case TriggerType.Dialogue:
+                GameObject.Find("UI/Dialogue").GetComponent<DialogueUI>().ShowDialogue(dialogueObject);
                 break;
         }
     }
