@@ -11,27 +11,26 @@ public class CF_Trigger : Editor
         base.OnInspectorGUI();
         Trigger trigger = (Trigger)target;
         trigger.isScript = false;
+        trigger.isText = false;
+        trigger.isSound = false;
+        trigger.isMusic = false;
+        trigger.isAnimation = false;
         switch (trigger.getTriggerType())
         {
             case TriggerType.Text:
-                trigger.text = EditorGUILayout.TextField("Text:", trigger.text);
-                trigger.textShowDuration = EditorGUILayout.FloatField("Duration (s):", trigger.textShowDuration);
-                trigger.textFadeDuration = EditorGUILayout.FloatField("Fade (s):", trigger.textFadeDuration);
+                trigger.isText = true;
                 break;
             case TriggerType.Sound:
-                trigger.sound = (AudioClip)EditorGUILayout.ObjectField("Sound:", trigger.sound, typeof(AudioClip), false);
-                trigger.soundVolume = EditorGUILayout.Slider("Volume:", trigger.soundVolume, 0f, 1f);
+                trigger.isSound = true;
                 break;
             case TriggerType.Music:
-                trigger.music = (AudioClip)EditorGUILayout.ObjectField("Music:", trigger.music, typeof(AudioClip), false);
-                trigger.musicLoop = EditorGUILayout.Toggle("Loop:", trigger.musicLoop);
+                trigger.isMusic = true;
                 break;
             case TriggerType.Script:
                 trigger.isScript = true;
                 break;
             case TriggerType.Animation:
-                trigger.animationObject = (GameObject)EditorGUILayout.ObjectField("Animation Object:", trigger.animationObject, typeof(GameObject), true);
-                trigger.animationName = EditorGUILayout.TextField("Animation Name:", trigger.animationName);
+                trigger.isAnimation = true;
                 break;
         }
     }

@@ -7,26 +7,27 @@ using TMPro;
 
 public class Trigger : MonoBehaviour
 {
+    [HideInInspector] public bool isScript = true;
+    [HideInInspector] public bool isText = false;
+    [HideInInspector] public bool isSound = false;
+    [HideInInspector] public bool isMusic = false;
+    [HideInInspector] public bool isAnimation = false;
+
     [SerializeField] private TriggerType triggerType;
     [SerializeField] private bool triggerOnce = false;
     private bool triggered = false;
-    [HideInInspector] public string text;
-    [HideInInspector] public float textShowDuration = 2f;
-    [HideInInspector] public float textFadeDuration = 0.5f;
-    [HideInInspector] public AudioClip sound;
-    [HideInInspector] public float soundVolume = 1f;
-    [HideInInspector] public AudioClip music;
-    [HideInInspector] public bool musicLoop = true;
-    [HideInInspector] public bool isScript = true;
+    [ConditionalHide("isText", true)] public string text;
+    [ConditionalHide("isText", true)] public float textShowDuration = 2f;
+    [ConditionalHide("isText", true)] public float textFadeDuration = 0.5f;
+    [ConditionalHide("isSound", true)] public AudioClip sound;
+    [ConditionalHide("isSound", true)] public float soundVolume = 1f;
+    [ConditionalHide("isMusic", true)] public AudioClip music;
+    [ConditionalHide("isMusic", true)] public bool musicLoop = true;
     [ConditionalHide("isScript", true)] public TriggerScript script;
-    [HideInInspector] public GameObject animationObject;
-    [HideInInspector] public string animationName;
+    [ConditionalHide("isAnimation", true)] public GameObject animationObject;
+    [ConditionalHide("isAnimation", true)] public string animationName;
 
     private GameObject textField;
-
-    private void Start()
-    {
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
