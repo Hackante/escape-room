@@ -1527,6 +1527,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3528500848295740746, guid: 87dbefb61ec31c742a1c8c9710430ea2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5072457406532519740, guid: 87dbefb61ec31c742a1c8c9710430ea2, type: 3}
       propertyPath: _player
       value: 
@@ -1810,7 +1814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1507205257269744623, guid: b91f1485a24f6474d9004e58769a3f0d, type: 3}
       propertyPath: isText
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1507205257269744623, guid: b91f1485a24f6474d9004e58769a3f0d, type: 3}
       propertyPath: script
@@ -1830,11 +1834,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1507205257269744623, guid: b91f1485a24f6474d9004e58769a3f0d, type: 3}
       propertyPath: isDialogue
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1507205257269744623, guid: b91f1485a24f6474d9004e58769a3f0d, type: 3}
       propertyPath: isAnimation
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507205257269744623, guid: b91f1485a24f6474d9004e58769a3f0d, type: 3}
+      propertyPath: triggerType
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1507205257269744623, guid: b91f1485a24f6474d9004e58769a3f0d, type: 3}
       propertyPath: dialogueObject

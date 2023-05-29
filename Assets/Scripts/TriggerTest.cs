@@ -14,7 +14,6 @@ public class TriggerTest : TriggerScript
 
     public override void trigger()
     {
-        Debug.Log("Triggered!");
         player.GetComponent<PlayerInput>().enabled = false;
         Animator anim = player.GetComponent<Animator>();
         anim.SetBool("isMoving", false);

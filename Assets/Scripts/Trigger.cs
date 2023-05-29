@@ -77,6 +77,7 @@ public class Trigger : MonoBehaviour
                 break;
             case TriggerType.Dialogue:
                 GameObject.Find("UI/Dialogue").GetComponent<DialogueUI>().ShowDialogue(dialogueObject);
+                GameObject.Find("Player").GetComponent<Animator>().SetBool("isMoving", false);
                 break;
         }
     }

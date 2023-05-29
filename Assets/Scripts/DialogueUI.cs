@@ -12,11 +12,13 @@ public class DialogueUI : MonoBehaviour
     private TypewriterEffect typewriterEffect;
     private ResponseHandler responseHandler;
     [SerializeField] private GameObject[] hideUIElements;
+    private SpeakingHandler speakingHandler;
 
     private void Start()
     {
         typewriterEffect = GetComponent<TypewriterEffect>();
         responseHandler = GetComponent<ResponseHandler>();
+        speakingHandler = GetComponent<SpeakingHandler>();
         CloseDialogue();
     }
 
@@ -32,6 +34,7 @@ public class DialogueUI : MonoBehaviour
     {
         for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
         {
+            speakingHandler.ShowSpeaking(dialogueObject.getElementOf(i));
             string dialogue = dialogueObject.Dialogue[i];
             yield return typewriterEffect.Run(dialogue, textLabel);
 
@@ -55,6 +58,7 @@ public class DialogueUI : MonoBehaviour
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;
         ShowOtherUI();
+        speakingHandler.HideSpeaking();
     }
 
     private void HideOtherUI()

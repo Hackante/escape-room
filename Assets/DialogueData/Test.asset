@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   dialogue:
-  - 'Hey! My name is Special Elf
-
-    lol...'
-  - 'Cool! Mine is GRINCHELBART!
-
-    HAHahAH
-
-    hahAHHA'
+  - dialogue:
+    - Hi my name is Special Elf
+    - Why?
+    - Well because I am special obviously...
+    speakerName: Specialelf
+    speakerColor: {r: 0.005835533, g: 0, b: 1, a: 1}
+  - dialogue:
+    - Wow... So createive right?
+    speakerName: Santa
+    speakerColor: {r: 0.9716981, g: 0.01375042, b: 0.01375042, a: 1}
   responses:
   - responseText: Yes
     dialogueObject: {fileID: 11400000, guid: 68e7aa908188fbd44b729b7d6555af6b, type: 2}

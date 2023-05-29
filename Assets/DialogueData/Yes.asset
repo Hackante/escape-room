@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Yes
   m_EditorClassIdentifier: 
   dialogue:
-  - YAAAAS OMG
+  - dialogue:
+    - rlly?
+    speakerName: Santa
+    speakerColor: {r: 1, g: 0.0047169924, b: 0.0047169924, a: 1}
   responses: []

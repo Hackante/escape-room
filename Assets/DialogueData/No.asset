@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: No
   m_EditorClassIdentifier: 
   dialogue:
-  - You said noooo lol..
+  - dialogue:
+    - omg I love ya!
+    speakerName: Special elf
+    speakerColor: {r: 0.21331091, g: 0.023584902, b: 1, a: 1}
   responses: []
