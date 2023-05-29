@@ -5,8 +5,22 @@ public class DialogueActivator : MonoBehaviour, IInteractable
 {
     [SerializeField] private DialogueObject dialogueObject;
 
+    public void UpdateDialogueObject(DialogueObject dialogueObject)
+    {
+        this.dialogueObject = dialogueObject;
+    }
+
     public void Interact(PlayerController playerController)
     {
+        foreach(DialogueResponseEvents responseEvent in GetComponents<DialogueResponseEvents>()) 
+        {
+            if(responseEvent.DialogueObject == dialogueObject)
+            {
+                playerController.DialogueUI.AddResponseEvents(responseEvent.ResponseEvents);
+                break;
+            }
+        }
+
         playerController.DialogueUI.ShowDialogue(dialogueObject);
     }
 
@@ -23,7 +37,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     {
         if (collision.CompareTag("Player") && collision.TryGetComponent<PlayerController>(out PlayerController playerController))
         {
-            if(playerController.Interactable is DialogueActivator dialogueActivator && dialogueActivator == this)
+            if (playerController.Interactable is DialogueActivator dialogueActivator && dialogueActivator == this)
             {
                 playerController.Interactable = null;
                 GameObject.Find("UI/InteractBttn").GetComponent<Button>().interactable = false;
