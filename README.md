@@ -2,7 +2,7 @@
 Read the README in [German](README.de.md)
 
 ## About
-The escape room was created as a project for the subject "P-Seminar" under the topic "Escape Rooms for Math classes". The game is made for for 9th graders on the Gymnasuim (G9) in Bavaria, Germany. The students are supposed to play the game in groups of two (this is a recommendation - the game can be played in larger groups or as a single person). The topic of this escape room is "Quadratic Functions". But the game also contains some puzzles that require knowlage of topics that were covered in lower grades. 
+The escape room was created as a project for the subject "P-Seminar" under the topic "Escape Rooms for Math classes". The game is made for 9th graders on the Gymnasuim (G9) in Bavaria, Germany. The students are supposed to play the game in groups of two (this is a recommendation - the game can be played in larger groups or as a single person). The topic of this escape room is "Quadratic Functions". But the game also contains some puzzles that require knowlage of topics that were covered in lower grades. 
 
 ## Credits
 ### Game Design
