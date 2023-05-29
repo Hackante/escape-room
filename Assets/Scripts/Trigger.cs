@@ -41,6 +41,19 @@ public class Trigger : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        if (isDialogue)
+        {
+            if (GetComponent<DialogueActivator>() == null) gameObject.AddComponent<DialogueActivator>().UpdateDialogueObject(dialogueObject);
+            if (GetComponent<DialogueResponseEvents>() == null)
+            {
+                gameObject.AddComponent<DialogueResponseEvents>().DialogueObject = dialogueObject;
+                GetComponent<DialogueResponseEvents>().OnValidate();
+            }
+        }
+    }
+
     public void trigger()
     {
         switch (triggerType)
@@ -76,7 +89,7 @@ public class Trigger : MonoBehaviour
                 if (animationObject) animationObject.GetComponent<Animator>().Play(animationName);
                 break;
             case TriggerType.Dialogue:
-                GameObject.Find("UI/Dialogue").GetComponent<DialogueUI>().ShowDialogue(dialogueObject);
+                GetComponent<DialogueActivator>().Interact(GameObject.Find("Player").GetComponent<PlayerController>());
                 GameObject.Find("Player").GetComponent<Animator>().SetBool("isMoving", false);
                 break;
         }

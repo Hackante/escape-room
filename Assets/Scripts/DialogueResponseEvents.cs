@@ -7,14 +7,14 @@ public class DialogueResponseEvents : MonoBehaviour
     [SerializeField] private ResponseEvent[] responseEvents;
 
     public ResponseEvent[] ResponseEvents => responseEvents;
-    public DialogueObject DialogueObject => dialogueObject;
+    public DialogueObject DialogueObject { get => dialogueObject; set => dialogueObject = value; }
 
     public void OnValidate()
     {
         if (dialogueObject == null || dialogueObject.Responses == null) return;
         if (responseEvents != null && responseEvents.Length == dialogueObject.Responses.Length) return;
 
-        if(responseEvents == null) responseEvents = new ResponseEvent[dialogueObject.Responses.Length];
+        if (responseEvents == null) responseEvents = new ResponseEvent[dialogueObject.Responses.Length];
         else Array.Resize(ref responseEvents, dialogueObject.Responses.Length);
 
         for (int i = 0; i < dialogueObject.Responses.Length; i++)
