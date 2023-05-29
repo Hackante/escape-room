@@ -45,6 +45,7 @@ public class Settings : MonoBehaviour
     public void SetVolume(float volume)
     {
         this.volume = volume;
+        GameObject.Find("Music").GetComponent<AudioSource>().volume = volume;
         PlayerPrefs.SetFloat("volume", volume);
         PlayerPrefs.Save();
     }
