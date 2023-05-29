@@ -12,4 +12,14 @@ namespace Enums
         de,
         en
     }
+
+    public enum TriggerType
+    {
+        Text,
+        Sound,
+        Music,
+        Script,
+        Animation,
+        Dialogue
+    }
 }
