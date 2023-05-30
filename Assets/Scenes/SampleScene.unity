@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 243087512}
   - component: {fileID: 243087511}
   - component: {fileID: 243087514}
+  - component: {fileID: 243087515}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -269,6 +270,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5
+--- !u!114 &243087515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243087510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d466524584d83c4e9c834d3d29d3e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueObject: {fileID: 11400000, guid: 8eda953fe9ecb3b4eb650666e9d0d77b, type: 2}
+  responseEvents:
+  - name: Yes
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: No
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!95 &392631005 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6814284328706057705, guid: b2f6f21b50529e54196dc7114a59da02, type: 3}
