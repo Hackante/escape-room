@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -133,8 +133,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8fd318bfb8334447bc7a50720ce86aa
-      internalID: -1604217422
+      spriteID: 374cd0f823c4f3d4898e7b4f13e84c8d
+      internalID: 1694136404
       vertices: []
       indices: 
       edges: []
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c1d95ac03042c4468a21157a15b0a21
-      internalID: -1413492292
+      spriteID: d86e7ece03d460e4e8ddf9b2afeec1b8
+      internalID: 1238712117
       vertices: []
       indices: 
       edges: []
@@ -171,8 +171,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      christmas_tree_0: -1604217422
-      christmas_tree_1: -1413492292
+      christmas_tree_0: 1694136404
+      christmas_tree_1: 1238712117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
