@@ -8,6 +8,7 @@ public class teleport : MonoBehaviour
     [SerializeField] private string sceneName;
     [SerializeField] private Animator animator;
     [SerializeField] private float delay = 1f;
+    [SerializeField] private Vector2 coordinates = Vector2.zero;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
