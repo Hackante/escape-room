@@ -5,13 +5,34 @@ using UnityEngine;
 public class TeleportPair : MonoBehaviour
 {
     public bool IsAvtive = true;
-    GameObject[] tpPoints;
+    [SerializeField] private List<GameObject> tpPoints = new List<GameObject>();
+    [SerializeField] private Animator crossfadeAnimator;
+    [SerializeField] private float delay = 1f;
 
-    void Start()
+    public void TeleportFrom(Transform transform)
     {
-        Transform[] transforms = gameObject.GetComponentsInChildren<Transform>();
-        foreach(Transform transform in transforms) {
-            
+        GameObject player = GameObject.FindWithTag("Player");
+        if (IsAvtive && player != null)
+        {
+            crossfadeAnimator.SetTrigger("Start");
+            StartCoroutine(teleportTo(transform));
         }
+    }
+
+    private IEnumerator teleportTo(Transform transform)
+    {
+        GameObject player = GameObject.FindWithTag("Player");
+        yield return new WaitForSeconds(delay);
+        if (transform == tpPoints[0].transform)
+        {
+            tpPoints[1].GetComponent<TeleportPoint>().IsAvtive = false;
+            player.transform.position = tpPoints[1].transform.position;
+        }
+        else
+        {
+            tpPoints[0].GetComponent<TeleportPoint>().IsAvtive = false;
+            player.transform.position = tpPoints[0].transform.position;
+        }
+        crossfadeAnimator.SetTrigger("End");
     }
 }
