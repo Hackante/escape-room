@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Dolphin
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 125237189, guid: b2a6e4f38075e2b46b0ba1a6d6c34b47, type: 3}
+  - {fileID: 879739130, guid: 172c6735f60f92444bf18a5f4521bc0a, type: 3}
+  - {fileID: 1330924390, guid: 172c6735f60f92444bf18a5f4521bc0a, type: 3}
+  - {fileID: -714388205, guid: 172c6735f60f92444bf18a5f4521bc0a, type: 3}
+  - {fileID: 1096889676, guid: 172c6735f60f92444bf18a5f4521bc0a, type: 3}
+  - {fileID: -795162766, guid: 172c6735f60f92444bf18a5f4521bc0a, type: 3}
+  - {fileID: -1677599082, guid: 172c6735f60f92444bf18a5f4521bc0a, type: 3}
+  - {fileID: 1250252209, guid: 172c6735f60f92444bf18a5f4521bc0a, type: 3}
+  - {fileID: 1500902891, guid: 172c6735f60f92444bf18a5f4521bc0a, type: 3}
+  - {fileID: 1173476887, guid: 172c6735f60f92444bf18a5f4521bc0a, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_MinSpeed: 3
+  m_MaxSpeed: 3
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0
