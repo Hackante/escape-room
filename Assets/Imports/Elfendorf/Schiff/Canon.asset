@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
   m_Name: Canon
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_AnimatedSprites:
+  - {fileID: 1258627768, guid: a78261d714db9cb4c954a0761e8c7bfa, type: 3}
+  - {fileID: -591059206, guid: a78261d714db9cb4c954a0761e8c7bfa, type: 3}
+  - {fileID: 372758977, guid: a78261d714db9cb4c954a0761e8c7bfa, type: 3}
+  - {fileID: 686891105, guid: a78261d714db9cb4c954a0761e8c7bfa, type: 3}
+  - {fileID: 487340796, guid: a78261d714db9cb4c954a0761e8c7bfa, type: 3}
+  - {fileID: -1846287707, guid: a78261d714db9cb4c954a0761e8c7bfa, type: 3}
+  m_MinSpeed: 3
+  m_MaxSpeed: 3
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0
