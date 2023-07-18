@@ -6,6 +6,7 @@ TagManager:
   tags:
   - IntroHandler
   - PlayerAnimation
+  - FrageText
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: 
+    uniqueID: 727819095
+    locked: 0
+  - name: 
+    uniqueID: 3588425675
+    locked: 0
+  - name: 
+    uniqueID: 1792749459
     locked: 0
