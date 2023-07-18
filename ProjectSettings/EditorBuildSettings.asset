@@ -5,21 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test.unity
     guid: cc5af5bdf062f0e4588ef19893ae2b0a
   - enabled: 1
     path: Assets/Scenes/MainMenue.unity
     guid: a2fd7751dfd0ba443bd2c907715e9908
   - enabled: 1
+    path: Assets/Scenes/WorldMap.unity
+    guid: dc73735c25414b74e876d30dabddebd3
+  - enabled: 1
     path: Assets/Scenes/Elfendorf.unity
     guid: 488b91621abf6ad4cb85ba9854d26c76
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: ea194e9895354cd419b9e32bdf91d73c
+  - enabled: 1
+    path: Assets/Scenes/Ocean.unity
+    guid: 2f8a7f66cb4248141b23a01326f968ef
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 7b885c7461973904abe6b8b74f8cdc5a
