@@ -317,7 +317,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "CEO \n\nProgrammer\n\nArtist\n\nFinacial Adviser\n\nOthers\n\n"
+  m_text: "CEO \n\nProgrammer\n\nArtist\n\nFinacial Adviser\n\nInvestors\n\n\n\nContributions
+    Art\n\nCave\n\nForest\n\n\n\nSigns\n\n\nBridge\n\nMap\n\nHouses\n\nInterior\n\n\n\nChristmas
+    Tree\n\nShip\n\nMusic Contributions\n\nMain Menue\n\nCredits\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -451,22 +453,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tarisai Chimukoko
-
-
-    Mihailo Drinic
-
-
-    Ahmed Gill
-
-
-    Ari Keshavarzian
-
-
-    Hund123NikitaBlum
-
-
-'
+  m_text: "Tarisai Chimukoko\n\nMihailo Drinic\n\nAhmed Gill\n\nAri Keshavarzian\n\nHagen
+    Ecke\n\nCaterina Georges\n\n\n\nZadi Art\n\nstealthix, Daniel Cook, Jetrel, yd,
+    and Zabin\n\nNemisys,Daniel Eddeland\n\n Xenodora\n\nBenjamin K. Smith\n\nzirok\n\nReemax,
+    Lanea Zimmermann, William Thompson\n\nStendhalGame\n\nbluecarrot16\n\n\n\n\nHoliday-Weasel\n\nThe-Epic-Story"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -543,6 +533,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763421031}
   m_CullTransparentMesh: 1
+--- !u!1001 &1073392654
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3241735977389369588, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ffac1d8a39db6b14c959098bdbc7f443, type: 3}
+    - target: {fileID: 5695878467705989203, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_Name
+      value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695878467705989203, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404795564116216753, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404795564116216753, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.042763
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404795564116216753, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9128383
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404795564116216753, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.013158683
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404795564116216753, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404795564116216753, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404795564116216753, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404795564116216753, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404795564116216753, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404795564116216753, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404795564116216753, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 13265add6057d884887940682ce8179c, type: 3}
 --- !u!1 &1499356012
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,3 +1078,4 @@ SceneRoots:
   - {fileID: 1992054041}
   - {fileID: 161568840}
   - {fileID: 8207653660546954061}
+  - {fileID: 1073392654}
