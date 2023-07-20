@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private DialogueUI dialogueUI;
     public DialogueUI DialogueUI { get => dialogueUI; }
     public IInteractable Interactable { get; set; }
+    public bool canMove = true;
 
 
     // Movement
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(dialogueUI.IsOpen) return;
+        if(dialogueUI.IsOpen || !canMove) return;
         if (movementInput != Vector2.zero)
         {
             bool moved = tryMove(movementInput);
