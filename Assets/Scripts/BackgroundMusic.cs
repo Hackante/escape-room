@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackgroundMusic : MonoBehaviour
 {
     // Singleton
-    /*public static BackgroundMusic Instance { get; private set; }
+    public static BackgroundMusic Instance { get; private set; }
 
     public void Awake()
     {
@@ -18,5 +18,5 @@ public class BackgroundMusic : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }*/
+    }
 }

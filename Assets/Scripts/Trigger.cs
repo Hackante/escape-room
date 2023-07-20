@@ -1,9 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 using Enums;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Trigger : MonoBehaviour
 {
@@ -13,6 +12,7 @@ public class Trigger : MonoBehaviour
     [HideInInspector] public bool isMusic = false;
     [HideInInspector] public bool isAnimation = false;
     [HideInInspector] public bool isDialogue = false;
+    [HideInInspector] public bool isTeleport = false;
 
     [SerializeField] private TriggerType triggerType;
     [SerializeField] private bool triggerOnce = false;
@@ -28,6 +28,10 @@ public class Trigger : MonoBehaviour
     [ConditionalHide("isAnimation", true)] public GameObject animationObject;
     [ConditionalHide("isAnimation", true)] public string animationName;
     [ConditionalHide("isDialogue", true)] public DialogueObject dialogueObject;
+    [ConditionalHide("isTeleport", true)] public string sceneName;
+    [ConditionalHide("isTeleport", true)] public Animator crossFade;
+    [ConditionalHide("isTeleport", true)] public float delay = 1f;
+    [ConditionalHide("isTeleport", true)] public Vector2 playerPosition;
 
 
     private GameObject textField;
@@ -92,8 +96,27 @@ public class Trigger : MonoBehaviour
                 GetComponent<DialogueActivator>().Interact(GameObject.Find("Player").GetComponent<PlayerController>());
                 GameObject.Find("Player").GetComponent<Animator>().SetBool("isMoving", false);
                 break;
+            case TriggerType.Teleport:
+                if(crossFade) crossFade.SetTrigger("Start");
+                if(sceneName == "" || sceneName == null || sceneName == SceneManager.GetActiveScene().name)
+                {
+                    GameObject.Find("Player").transform.position = playerPosition;
+                    crossFade.SetTrigger("End");
+                }
+                else
+                {
+                    StartCoroutine(LoadScene(sceneName));
+                }
+                break;
         }
     }
+
+    public IEnumerator LoadScene(string sceneName)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneName);
+    }
+
     public TriggerType getTriggerType()
     {
         return triggerType;

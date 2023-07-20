@@ -16,6 +16,7 @@ public class CF_Trigger : Editor
         trigger.isMusic = false;
         trigger.isAnimation = false;
         trigger.isDialogue = false;
+        trigger.isTeleport = false;
         switch (trigger.getTriggerType())
         {
             case TriggerType.Text:
@@ -35,6 +36,9 @@ public class CF_Trigger : Editor
                 break;
             case TriggerType.Dialogue:
                 trigger.isDialogue = true;
+                break;
+            case TriggerType.Teleport:
+                trigger.isTeleport = true;
                 break;
         }
     }

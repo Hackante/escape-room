@@ -20,6 +20,7 @@ namespace Enums
         Music,
         Script,
         Animation,
-        Dialogue
+        Dialogue,
+        Teleport,
     }
 }
