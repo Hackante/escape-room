@@ -15,7 +15,7 @@ The escape room was created as a project for the subject "P-Seminar" under the t
 We do not own any of the assets listed below. All of them are licensed under a [Creative Commons License](https://creativecommons.org/licenses/), free to use for non-commercial use, have a public domain license or have been purchased by us. The assests have been sliced or not been modified at all. If they were modiefied in any other way, it is stated after the asset.
 - [szadiart](https://itch.io/profile/szadiart)
   - [RPG Worlds Caves](https://szadiart.itch.io/rpg-worlds-ca) - License: *view on [website](https://szadiart.itch.io/rpg-worlds-ca#:~:text=a%20lot%20more-,%3E%3E%3E%20License%20for%20Everyone.,Credit%20is%20not%20required%20but%20appreciated.,-.PNG%20and%20.PSD)*
-  - [RPG Worlds - Houses and Interiors](https://szadiart.itch.io/rpg-worlds-houses-and-interiors) - License: *view on [website](https://szadiart.itch.io/rpg-worlds-ca#:~:text=a%20lot%20more-,%3E%3E%3E%20License%20for%20Everyone.,Credit%20is%20not%20required%20but%20appreciated.,-.PNG%20and%20.PSD)*
+  - [RPG Worlds - Houses and Interiors](https://szadiart.itch.io/rpg-worlds-houses-and-interiors) - License: *view on [website](https://szadiart.itch.io/rpg-worlds-houses-and-interiors#:~:text=and%20closed%20versions%20%2D%2D%2D-,%3E%3E%3E%20License%20for%20Everyone.,Credit%20is%20not%20required%20but%20appreciated.,-.PNG%20and%20.PSD)*
 - [stealthix](https://itch.io/profile/stealthix)
   - [RPG Nature Tileset - Seasons](https://stealthix.itch.io/rpg-nature-tileset) [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 - [zirok](https://itch.io/profile/zirok)
