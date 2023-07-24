@@ -3,6 +3,7 @@ using UnityEngine;
 using Enums;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Trigger : MonoBehaviour
 {
@@ -63,7 +64,7 @@ public class Trigger : MonoBehaviour
         switch (triggerType)
         {
             case TriggerType.Text:
-                if (!textField) textField = GameObject.Find("UI/DisplayText");
+                if (!textField) textField = GameObject.Find("UI/DisplayText/Text");
                 TextMeshProUGUI textMesh = textField.GetComponent<TextMeshProUGUI>();
                 textMesh.alpha = 0;
                 textMesh.SetText(text);
@@ -131,11 +132,13 @@ public class Trigger : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds);
         StartCoroutine(Fade(textFadeDuration));
+        StartCoroutine(FadeBackground(textFadeDuration));
     }
 
     private void ShowText()
     {
         StartCoroutine(Fade(textFadeDuration));
+        StartCoroutine(FadeBackground(textFadeDuration));
     }
 
     private IEnumerator Fade(float seconds)
@@ -148,6 +151,21 @@ public class Trigger : MonoBehaviour
         {
             float alpha = Mathf.Lerp(start, end, currentTime / duration);
             textField.GetComponent<TextMeshProUGUI>().alpha = alpha;
+            currentTime += Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    private IEnumerator FadeBackground(float seconds)
+    {
+        float duration = seconds;
+        float currentTime = 0f;
+        float start = GameObject.Find("UI/DisplayText/Background").GetComponent<Image>().color.a;
+        float end = start == 0 ? 0.7f : 0;
+        while (currentTime < duration)
+        {
+            float alpha = Mathf.Lerp(start, end, currentTime / duration);
+            GameObject.Find("UI/DisplayText/Background").GetComponent<Image>().color = new Color(0, 0, 0, alpha);
             currentTime += Time.deltaTime;
             yield return null;
         }
