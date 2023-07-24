@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BackgroundMusic : MonoBehaviour
@@ -16,7 +14,14 @@ public class BackgroundMusic : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            if (Instance.GetComponent<AudioSource>().clip != GetComponent<AudioSource>().clip)
+            {
+                Destroy(Instance.gameObject);
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+                Destroy(gameObject);
         }
     }
 }
