@@ -36,6 +36,7 @@ public class Trigger : MonoBehaviour
 
 
     private GameObject textField;
+    private GameObject background;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -65,8 +66,11 @@ public class Trigger : MonoBehaviour
         {
             case TriggerType.Text:
                 if (!textField) textField = GameObject.Find("UI/DisplayText/Text");
+                if (!background) background = GameObject.Find("UI/DisplayText/Background");
                 TextMeshProUGUI textMesh = textField.GetComponent<TextMeshProUGUI>();
+                Image backgroundImage = background.GetComponent<Image>();
                 textMesh.alpha = 0;
+                backgroundImage.color = new Color(0, 0, 0, 0);
                 textMesh.SetText(text);
                 ShowText();
                 HideTextAfter(textShowDuration);
@@ -165,7 +169,7 @@ public class Trigger : MonoBehaviour
         while (currentTime < duration)
         {
             float alpha = Mathf.Lerp(start, end, currentTime / duration);
-            GameObject.Find("UI/DisplayText/Background").GetComponent<Image>().color = new Color(0, 0, 0, alpha);
+            background.GetComponent<Image>().color = new Color(0, 0, 0, alpha);
             currentTime += Time.deltaTime;
             yield return null;
         }
