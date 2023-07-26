@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class ModalWindowPanel : MonoBehaviour
 {
@@ -32,10 +30,10 @@ public class ModalWindowPanel : MonoBehaviour
     private Action onConfirmAction;
     private Action onDeclineAction;
     private Action onAlternateAction;
-
     public UnityEvent onContinueCallback;
     public UnityEvent onCancelCallback;
     public UnityEvent onAlternateCallback;
+    [SerializeField] private GameObject player;
 
     private static ModalWindowPanel _instance;
 
@@ -77,14 +75,25 @@ public class ModalWindowPanel : MonoBehaviour
 
     public void Close()
     {
+        EnablePlayerMovement();
         this.gameObject.SetActive(false);
+    }
 
+    public void DisablePlayerMovement()
+    {
+        player.GetComponent<PlayerController>().canMove = false;
+    }
+
+    public void EnablePlayerMovement()
+    {
+        player.GetComponent<PlayerController>().canMove = true;
     }
 
     public void ShowAsVertical(string title, string description, Sprite banner, Action onConfirm, Action onDecline,
         Action onAlternate = null, string confirmLabel = "Bestätigen", string declineLabel = "Abbrechen", string alternateLabel = null
         )
     {
+        DisablePlayerMovement();
         _headerArea.gameObject.SetActive(string.IsNullOrEmpty(title) == false);
         _titleField.text = title;
 
