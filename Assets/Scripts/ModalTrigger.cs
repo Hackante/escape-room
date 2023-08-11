@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class ModalTrigger : MonoBehaviour
 {
     public string title;
-    public string description;
+    [TextArea] public string description;
     public Sprite banner;
     public bool triggerOnEnable;
     public UnityEvent onContinueEvent;

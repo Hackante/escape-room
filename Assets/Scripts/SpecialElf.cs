@@ -8,6 +8,7 @@ public class specialElf : MonoBehaviour
     private bool onRope = false;
     private Animator anim;
     [SerializeField] private GameObject rope;
+    [SerializeField] private Button _interactBttn;
 
     void Start()
     {
@@ -19,7 +20,12 @@ public class specialElf : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GameObject.Find("UI/InteractBttn").GetComponent<Button>().interactable = true;
+            if (_interactBttn != null) _interactBttn.interactable = true;
+            else
+            {
+                Debug.LogWarning("Use object reference instead of Find");
+                GameObject.Find("UI/InteractBttn").GetComponent<Button>().interactable = true;
+            }
         }
     }
 
@@ -27,7 +33,12 @@ public class specialElf : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GameObject.Find("UI/InteractBttn").GetComponent<Button>().interactable = false;
+            if (_interactBttn != null) _interactBttn.interactable = false;
+            else
+            {
+                Debug.LogWarning("Use object reference instead of Find");
+                GameObject.Find("UI/InteractBttn").GetComponent<Button>().interactable = false;
+            }
         }
     }
 
