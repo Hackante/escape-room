@@ -96,8 +96,10 @@ public class ModalWindowPanel : MonoBehaviour
         DisablePlayerMovement();
         _headerArea.gameObject.SetActive(string.IsNullOrEmpty(title) == false);
         _titleField.text = title;
-
+        
+        _bodyArea.gameObject.SetActive(string.IsNullOrEmpty(description) == false);
         _descriptionText.text = description;
+        _bannerImage.gameObject.SetActive(banner != null);
         _bannerImage.sprite = banner;
 
         _confirmButton.gameObject.SetActive(onConfirm != null);

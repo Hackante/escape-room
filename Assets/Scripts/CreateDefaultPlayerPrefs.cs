@@ -7,8 +7,8 @@ public class CreateDefaultPlayerPrefs : MonoBehaviour
 {
     public CreateDefaultPlayerPrefs()
     {
-        // Controltype 
-        PlayerPrefs.SetInt("controltype", (int)Controltype.DPad);
+        // InputType 
+        PlayerPrefs.SetInt("InputType", (int)InputType.Joystick);
         // Volume
         PlayerPrefs.SetFloat("volume", 1f);
         // Language

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class DialogueActivator : MonoBehaviour, IInteractable
 {
     [SerializeField] private DialogueObject dialogueObject;
+    [SerializeField] private Button _interactBttn;
 
     public void UpdateDialogueObject(DialogueObject dialogueObject)
     {
@@ -12,9 +13,9 @@ public class DialogueActivator : MonoBehaviour, IInteractable
 
     public void Interact(PlayerController playerController)
     {
-        foreach(DialogueResponseEvents responseEvent in GetComponents<DialogueResponseEvents>()) 
+        foreach (DialogueResponseEvents responseEvent in GetComponents<DialogueResponseEvents>())
         {
-            if(responseEvent.DialogueObject == dialogueObject)
+            if (responseEvent.DialogueObject == dialogueObject)
             {
                 playerController.DialogueUI.AddResponseEvents(responseEvent.ResponseEvents);
                 break;
@@ -29,7 +30,12 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         if (collision.CompareTag("Player") && collision.TryGetComponent<PlayerController>(out PlayerController playerController))
         {
             playerController.Interactable = this;
-            GameObject.Find("UI/InteractBttn").GetComponent<Button>().interactable = true;
+            if (_interactBttn != null) _interactBttn.interactable = true;
+            else
+            {
+                Debug.LogWarning("Use object reference instead of Find");
+                GameObject.Find("UI/InteractBttn").GetComponent<Button>().interactable = true;
+            }
         }
     }
 
@@ -40,7 +46,12 @@ public class DialogueActivator : MonoBehaviour, IInteractable
             if (playerController.Interactable is DialogueActivator dialogueActivator && dialogueActivator == this)
             {
                 playerController.Interactable = null;
-                GameObject.Find("UI/InteractBttn").GetComponent<Button>().interactable = false;
+                if (_interactBttn != null) _interactBttn.interactable = false;
+                else
+                {
+                    Debug.LogWarning("Use object reference instead of Find");
+                    GameObject.Find("UI/InteractBttn").GetComponent<Button>().interactable = false;
+                }
             }
         }
     }
