@@ -14,7 +14,7 @@ public class MainMenueHandler : MonoBehaviour
     {
         Debug.Log("Settings opened");
     }
-    
+
     public void openCredits()
     {
         crossFade.SetTrigger("Start");
@@ -26,5 +26,12 @@ public class MainMenueHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void OpenMainMenue()
+    {
+        crossFade.SetTrigger("Start");
+        StartCoroutine(LoadScene("MainMenue"));
+        hideElements.trigger();
     }
 }

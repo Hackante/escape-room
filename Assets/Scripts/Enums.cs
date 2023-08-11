@@ -1,9 +1,9 @@
 namespace Enums
 {
-    public enum Controltype
+    public enum InputType
     {
-        DPad,
         Joystick,
+        DPad,
         Keyboard
     }
 
