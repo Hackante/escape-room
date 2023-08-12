@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +7,6 @@ public class specialElf : MonoBehaviour
     private bool onRope = false;
     private Animator anim;
     [SerializeField] private GameObject rope;
-    [SerializeField] private Button _interactBttn;
 
     void Start()
     {
@@ -20,12 +18,7 @@ public class specialElf : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (_interactBttn != null) _interactBttn.interactable = true;
-            else
-            {
-                Debug.LogWarning("Use object reference instead of Find");
-                GameObject.Find("UI/InteractBttn").GetComponent<Button>().interactable = true;
-            }
+            UI.Instance.SetInteractBttnInteractable(true);
         }
     }
 
@@ -33,12 +26,7 @@ public class specialElf : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (_interactBttn != null) _interactBttn.interactable = false;
-            else
-            {
-                Debug.LogWarning("Use object reference instead of Find");
-                GameObject.Find("UI/InteractBttn").GetComponent<Button>().interactable = false;
-            }
+            UI.Instance.SetInteractBttnInteractable(false);
         }
     }
 

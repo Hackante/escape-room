@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogueActivator : MonoBehaviour, IInteractable
 {
     [SerializeField] private DialogueObject dialogueObject;
-    [SerializeField] private Button _interactBttn;
+    [SerializeField] private UnityEvent[] closeEvents;
 
     public void UpdateDialogueObject(DialogueObject dialogueObject)
     {
@@ -21,6 +22,10 @@ public class DialogueActivator : MonoBehaviour, IInteractable
                 break;
             }
         }
+        foreach (UnityEvent closeEvent in closeEvents)
+        {
+            playerController.DialogueUI.AddCloseEvent(closeEvent);
+        }
 
         playerController.DialogueUI.ShowDialogue(dialogueObject);
     }
@@ -30,12 +35,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         if (collision.CompareTag("Player") && collision.TryGetComponent<PlayerController>(out PlayerController playerController))
         {
             playerController.Interactable = this;
-            if (_interactBttn != null) _interactBttn.interactable = true;
-            else
-            {
-                Debug.LogWarning("Use object reference instead of Find");
-                GameObject.Find("UI/InteractBttn").GetComponent<Button>().interactable = true;
-            }
+            UI.Instance.SetInteractBttnInteractable(true);
         }
     }
 
@@ -46,12 +46,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
             if (playerController.Interactable is DialogueActivator dialogueActivator && dialogueActivator == this)
             {
                 playerController.Interactable = null;
-                if (_interactBttn != null) _interactBttn.interactable = false;
-                else
-                {
-                    Debug.LogWarning("Use object reference instead of Find");
-                    GameObject.Find("UI/InteractBttn").GetComponent<Button>().interactable = false;
-                }
+                UI.Instance.SetInteractBttnInteractable(false);
             }
         }
     }

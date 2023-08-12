@@ -1,5 +1,6 @@
 using UnityEngine;
 using Enums;
+using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
@@ -43,4 +44,7 @@ public class UI : MonoBehaviour
         _settingsPanel.SetActive(true);
     }
 
+    public void SetInteractBttnInteractable(bool active) {
+        _interactBttn.GetComponent<Button>().interactable = active;
+    }
 }

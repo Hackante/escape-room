@@ -51,12 +51,13 @@ public class Trigger : MonoBehaviour
     {
         if (isDialogue)
         {
-            if (GetComponent<DialogueActivator>() == null) gameObject.AddComponent<DialogueActivator>().UpdateDialogueObject(dialogueObject);
+            if (GetComponent<DialogueActivator>() == null) gameObject.AddComponent<DialogueActivator>();
             if (GetComponent<DialogueResponseEvents>() == null)
             {
                 gameObject.AddComponent<DialogueResponseEvents>().DialogueObject = dialogueObject;
                 GetComponent<DialogueResponseEvents>().OnValidate();
             }
+            GetComponent<DialogueActivator>().UpdateDialogueObject(dialogueObject);
         }
     }
 
@@ -98,7 +99,7 @@ public class Trigger : MonoBehaviour
                 if (animationObject) animationObject.GetComponent<Animator>().Play(animationName);
                 break;
             case TriggerType.Dialogue:
-                GetComponent<DialogueActivator>().Interact(GameObject.Find("Player").GetComponent<PlayerController>());
+                GetComponent<DialogueActivator>().Interact(PlayerController.Instance);
                 GameObject.Find("Player").GetComponent<Animator>().SetBool("isMoving", false);
                 break;
             case TriggerType.Teleport:

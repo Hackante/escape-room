@@ -1,11 +1,15 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.Events;
+using System;
+using System.Collections.Generic;
 
 public class DialogueUI : MonoBehaviour
 {
     [SerializeField] TMP_Text textLabel;
     [SerializeField] private GameObject dialogueBox;
+    [SerializeField] List<UnityEvent> closeEvents;
 
     public bool IsOpen { get; private set; }
 
@@ -34,6 +38,11 @@ public class DialogueUI : MonoBehaviour
     public void AddResponseEvents(ResponseEvent[] responseEvents)
     {
         responseHandler.AddResponseEvents(responseEvents);
+    }
+
+    public void AddCloseEvent(UnityEvent closeEvent)
+    {
+        closeEvents.Add(closeEvent);
     }
 
     private IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
@@ -66,7 +75,7 @@ public class DialogueUI : MonoBehaviour
         while (typewriterEffect.IsRunning)
         {
             yield return null;
-            if(Input.GetKeyDown(KeyCode.Space) || skipped)
+            if (Input.GetKeyDown(KeyCode.Space) || skipped)
             {
                 typewriterEffect.Stop();
                 skipped = false;
@@ -81,6 +90,10 @@ public class DialogueUI : MonoBehaviour
 
     public void CloseDialogue()
     {
+        foreach (UnityEvent closeEvent in closeEvents)
+        {
+            closeEvent?.Invoke();
+        }
         IsOpen = false;
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;

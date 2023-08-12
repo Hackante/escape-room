@@ -25,6 +25,14 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     SpriteRenderer spriteRenderer;
 
+    static PlayerController instance;
+    public static PlayerController Instance { get => instance; }
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

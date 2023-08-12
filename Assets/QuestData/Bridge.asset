@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadb33376c6bd847b20896e9aa152bd, type: 3}
+  m_Name: Bridge
+  m_EditorClassIdentifier: 
+  questName: "Br\xFCcke"
+  questDescription: "Die Br\xFCcke der Elfen ist kaputt. Zum reparieren ben\xF6tigst
+    du Holz, dass du von Gideon kaufst. Ein Stamm kostet bei ihm <b>{Preis}</b>,
+    wobei dieser <b>1,5m</b> lang ist und einen Durchmesser von <b>50cm</b> hat.
+    Wie viel Volumen hat ein Stamm in m<sup>3</sup>"
+  image: {fileID: 0}
+  answer: 0.3
+  layout: 1

@@ -23,4 +23,10 @@ namespace Enums
         Dialogue,
         Teleport,
     }
+
+    public enum Layout
+    {
+        Vertical,
+        Horizontal
+    }
 }
