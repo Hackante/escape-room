@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using static SaveLoad;
 
 public class QuestUI : MonoBehaviour
 {
@@ -84,6 +85,7 @@ public class QuestUI : MonoBehaviour
         if (_questObject.CheckAnswer(_inputField.text))
         {
             onContinueCallback?.Invoke();
+            SaveLoad.Instance.saveObject.TaskBrokenBridge = 2;
             Close();
         }
         else
