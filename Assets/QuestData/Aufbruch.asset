@@ -24,5 +24,5 @@ MonoBehaviour:
     Ermittle die Uhrzeit zu der es sicher ist, den Hafen zu verlassen. Gib das Ergebnis
     in folgender Form an z.B. : <b>45h - 56h</b>.\r\n"
   image: {fileID: 21300000, guid: 4c0fde45cb5df66408e6409381348857, type: 3}
-  answer: 10h - 14h
+  answer: 10h-14h
   layout: 1
