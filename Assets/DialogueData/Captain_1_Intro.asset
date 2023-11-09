@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872c416d5dd1a814dae6b17194d96eb9, type: 3}
+  m_Name: Captain_1_Intro
+  m_EditorClassIdentifier: 
+  dialogue:
+  - dialogue:
+    - "Ahoi, Reisender! Was kann ich f\xFCr dich tun?"
+    speakerName: NPC - Captain
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - "Ich m\xF6chte zum S\xFCdpol reisen, um den Weihnachtsmann zu retten."
+    speakerName: Player
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - "Ai, ich w\xFCrde dir gerne helfen. Ich kann aber die Formel, die mir meine
+      Vorfahren hinterlassen haben, nicht entziffern."
+    - "Nur mit der wei\xDF man, wann die See sicher ist zum Aufbrechen."
+    - "Schau mal auf der gro\xDFen Tafel nach. Vielleicht kannst du sie entziffern."
+    speakerName: NPC - Captain
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  responses:
+  - responseText: Aufgbe annehmen
+    dialogueObject: {fileID: 0}

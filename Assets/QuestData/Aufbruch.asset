@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadb33376c6bd847b20896e9aa152bd, type: 3}
+  m_Name: Aufbruch
+  m_EditorClassIdentifier: 
+  questName: Aufbruch
+  questDescription: "Die Familie der Elfenkapit\xE4ne hat \xFCber Jahrzehnte den
+    Wasserstand am Nordpol dokumentiert und daraus eine Formel entwickelt, die den
+    Wasserstand zu bestimmten Uhrzeiten ermittelt. Das Schiff kann nur bei einen
+    bestimmten Wasserstand sicher in die See stechen, sonst kentert es. Leider hat
+    der jetzige Kapit\xE4n nicht besonders auf die Formel gut achtgegeben und sie
+    ist besch\xE4digt worden. Er hat sich aber gemerkt, dass die Formel f\xFCr den
+    idealen Wasserstand <b>f(x) = ((1)/(2)) x*2+2<sup>2</sup>-x+2 ((8)/(4))</b> lautet
+    und die Formel f\xFCr den aktuellen Wasserstand <b>g(x) = -0.05 (x-12)<sup>2</sup>+8.2</b>.
+    Ermittle die Uhrzeit zu der es sicher ist, den Hafen zu verlassen. Gib das Ergebnis
+    in folgender Form an z.B. : <b>45h - 56h</b>.\r\n"
+  image: {fileID: 21300000, guid: 4c0fde45cb5df66408e6409381348857, type: 3}
+  answer: 10h - 14h
+  layout: 1
