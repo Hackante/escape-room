@@ -47,7 +47,7 @@ public class SaveLoad : MonoBehaviour
                 break;
             case "Ozean":
                 GameObject.Find("Player").transform.position = saveObject.ozeanPosition;
-                // Fix Hole
+                // TODO: Fix Hole
                 break;
         }
     }
@@ -59,8 +59,8 @@ public class SaveLoad : MonoBehaviour
         // Elfendorf
         public Vector3 elfendorfPosition;
         public int TaskBrokenBridge;
-        public int TaskShoesCollected;
         public int TaskBoatOpened;
+        public int TaskShoesCollected;
 
         // Ozean
         public Vector3 ozeanPosition;
@@ -73,6 +73,11 @@ public class SaveLoad : MonoBehaviour
         if (saveObject.TaskBrokenBridge == 2)
         {
             GameObject.Find("Quest - Bridge").GetComponent<Solve>().SolveQuest();
+        }
+        // Captain 1
+        if (saveObject.TaskBoatOpened == 2)
+        {
+            GameObject.Find("Quest - Captain").GetComponent<Solve>().SolveQuest();
         }
     }
 }
