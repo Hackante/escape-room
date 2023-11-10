@@ -12,6 +12,8 @@ public class QuestUI : MonoBehaviour
 {
     [SerializeField] private GameObject _questPanel;
     [SerializeField] private QuestObject _questObject;
+    [SerializeField] private PlayerController _playerController;
+    [SerializeField] private GameObject _player;
 
     [Header("Header")]
     [SerializeField] private TextMeshProUGUI _titleField;
@@ -72,12 +74,16 @@ public class QuestUI : MonoBehaviour
     {
         _inputField.text = string.Empty;
         _questPanel.SetActive(false);
+        // Enable Playermovement
+        // TODO: Fix this
     }
 
     public void Open()
     {
         _footerText.text = "Achtung! Wenn du falsche Antworten gibst, wird dir Strafzeit berechnet.";
         _questPanel.SetActive(true);
+        // Disable Playermovement
+        // TODO: Fix this
     }
 
     public void OnConfirm()

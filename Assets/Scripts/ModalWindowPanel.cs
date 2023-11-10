@@ -81,12 +81,12 @@ public class ModalWindowPanel : MonoBehaviour
 
     public void DisablePlayerMovement()
     {
-        player.GetComponent<PlayerController>().canMove = false;
+        player.GetComponent<PlayerController>().CanMove = false;
     }
 
     public void EnablePlayerMovement()
     {
-        player.GetComponent<PlayerController>().canMove = true;
+        player.GetComponent<PlayerController>().CanMove = true;
     }
 
     public void ShowAsVertical(string title, string description, Sprite banner, Action onConfirm, Action onDecline,

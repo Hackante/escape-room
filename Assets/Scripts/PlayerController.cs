@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private DialogueUI dialogueUI;
     public DialogueUI DialogueUI { get => dialogueUI; }
     public IInteractable Interactable { get; set; }
-    public bool canMove = true;
+    public bool CanMove = true;
 
 
     // Movement
@@ -25,13 +25,8 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     SpriteRenderer spriteRenderer;
 
-    static PlayerController instance;
-    public static PlayerController Instance { get => instance; }
+    public static PlayerController Instance { get; private set; }
 
-    private void Awake()
-    {
-        instance = this;
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(dialogueUI.IsOpen || !canMove) return;
+        if (dialogueUI.IsOpen || !CanMove) return;
         if (movementInput != Vector2.zero)
         {
             bool moved = tryMove(movementInput);
@@ -137,5 +132,10 @@ public class PlayerController : MonoBehaviour
     public void Move(Vector2 direction)
     {
         movementInput = direction;
+    }
+
+    public void SetCanMove(bool canMove)
+    {
+        CanMove = canMove;
     }
 }
