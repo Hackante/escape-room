@@ -6,6 +6,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
 {
     [SerializeField] private DialogueObject dialogueObject;
     [SerializeField] private UnityEvent[] closeEvents;
+    [SerializeField] private bool useCloseEvents = true;
 
     public void UpdateDialogueObject(DialogueObject dialogueObject)
     {
@@ -24,7 +25,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         }
         foreach (UnityEvent closeEvent in closeEvents)
         {
-            playerController.DialogueUI.AddCloseEvent(closeEvent);
+            if(useCloseEvents) playerController.DialogueUI.AddCloseEvent(closeEvent);
         }
 
         playerController.DialogueUI.ShowDialogue(dialogueObject);
@@ -49,5 +50,10 @@ public class DialogueActivator : MonoBehaviour, IInteractable
                 UI.Instance.SetInteractBttnInteractable(false);
             }
         }
+    }
+
+    public void SetUseCloseEvents(bool useCloseEvents)
+    {
+        this.useCloseEvents = useCloseEvents;
     }
 }

@@ -99,6 +99,7 @@ public class DialogueUI : MonoBehaviour
         textLabel.text = string.Empty;
         ShowOtherUI();
         speakingHandler.HideSpeaking();
+        closeEvents.Clear();
     }
 
     private void HideOtherUI()
