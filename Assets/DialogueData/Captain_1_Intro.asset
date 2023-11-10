@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogue:
   - dialogue:
     - "Ahoi, Reisender! Was kann ich f\xFCr dich tun?"
-    speakerName: NPC - Captain
+    speakerName: NPC Captain
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   - dialogue:
     - "Ich m\xF6chte zum S\xFCdpol reisen, um den Weihnachtsmann zu retten."
@@ -26,7 +26,7 @@ MonoBehaviour:
       Vorfahren hinterlassen haben, nicht entziffern."
     - "Nur mit der wei\xDF man, wann die See sicher ist zum Aufbrechen."
     - "Schau mal auf der gro\xDFen Tafel nach. Vielleicht kannst du sie entziffern."
-    speakerName: NPC - Captain
+    speakerName: NPC Captain
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   responses:
   - responseText: Aufgbe annehmen

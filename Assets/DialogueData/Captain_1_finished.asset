@@ -15,8 +15,8 @@ MonoBehaviour:
   dialogue:
   - dialogue:
     - WOW!
-    - Du bist ein Genie!
-    - Jetzt schnell auf zum Schiff! Wir haben noch eine Chance.
+    - Bist du ein Mathegenie?
+    - Jetzt aber zackig! Wir haben noch eine Chance.
     speakerName: NPC Captain
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   responses: []
