@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
-    [SerializeField] private GameObject _interactBttn;
-    [SerializeField] private GameObject _dialoguePanel;
-    [SerializeField] private GameObject _settingsPanel;
-    [SerializeField] private GameObject _controls;
+    [SerializeField] private GameObject interactButton;
+    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject controls;
     [SerializeField] private GameObject DPad;
     [SerializeField] private GameObject Joystick;
 
@@ -41,10 +41,10 @@ public class UI : MonoBehaviour
     }
 
     public void openSettings() {
-        _settingsPanel.SetActive(true);
+        settingsPanel.SetActive(true);
     }
 
     public void SetInteractBttnInteractable(bool active) {
-        _interactBttn.GetComponent<Button>().interactable = active;
+        interactButton.GetComponent<Button>().interactable = active;
     }
 }
