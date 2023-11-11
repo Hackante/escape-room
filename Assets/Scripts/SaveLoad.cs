@@ -80,4 +80,14 @@ public class SaveLoad : MonoBehaviour
             GameObject.Find("Quest - Captain").GetComponent<Solve>().SolveQuest();
         }
     }
+
+    private void LoadOzean()
+    {
+        // TODO: Implement Fixing things
+        // Hole
+        if (saveObject.TaskHoleFixed == 2)
+        {
+            GameObject.Find("Quest - Hole").GetComponent<Solve>().SolveQuest();
+        }
+    }
 }
