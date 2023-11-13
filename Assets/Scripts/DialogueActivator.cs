@@ -20,12 +20,19 @@ public class DialogueActivator : MonoBehaviour, IInteractable
             if (responseEvent.DialogueObject == dialogueObject)
             {
                 playerController.DialogueUI.AddResponseEvents(responseEvent.ResponseEvents);
+                /*
+                BUG: Dialogue Activator doesn't activate immediately
+                NullReferenceException: Object reference not set to an instance of an object
+                DialogueActivator.Interact (PlayerController playerController) (at Assets/Scripts/DialogueActivator.cs:22)
+                Trigger.trigger () (at Assets/Scripts/Trigger.cs:102)
+                Trigger.OnTriggerEnter2D (UnityEngine.Collider2D collision) (at Assets/Scripts/Trigger.cs:45)
+                */
                 break;
             }
         }
         foreach (UnityEvent closeEvent in closeEvents)
         {
-            if(useCloseEvents) playerController.DialogueUI.AddCloseEvent(closeEvent);
+            if (useCloseEvents) playerController.DialogueUI.AddCloseEvent(closeEvent);
         }
 
         playerController.DialogueUI.ShowDialogue(dialogueObject);
