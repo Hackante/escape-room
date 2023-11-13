@@ -17,10 +17,16 @@ public class teleport : MonoBehaviour
         }
     }
 
-    IEnumerator LoadScene()
+    public IEnumerator LoadScene()
     {
+        yield return new WaitForSeconds(delay/2);
         animator.SetTrigger("Start");
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(delay/2);
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void SetSceneName(string sceneName)
+    {
+        this.sceneName = sceneName;
     }
 }

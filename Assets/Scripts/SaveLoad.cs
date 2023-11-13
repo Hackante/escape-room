@@ -23,6 +23,7 @@ public class SaveLoad : MonoBehaviour
         }
 
         this.saveObject = new SaveObject();
+        this.saveObject.TimeStarted = System.DateTime.Now;
     }
 
     public string Export()
@@ -54,6 +55,7 @@ public class SaveLoad : MonoBehaviour
 
     public class SaveObject
     {
+        public System.DateTime TimeStarted;
         // Tasks have states (0 = not started, 1 = started, 2 = finished)
 
         // Elfendorf
@@ -83,7 +85,6 @@ public class SaveLoad : MonoBehaviour
 
     private void LoadOzean()
     {
-        // TODO: Implement Fixing things
         // Hole
         if (saveObject.TaskHoleFixed == 2)
         {

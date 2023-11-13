@@ -19,8 +19,10 @@ public class UI : MonoBehaviour
         Instance = this;
     }
 
-    public void SetControls(Enums.InputType inputType) {
-        switch (inputType) {
+    public void SetControls(Enums.InputType inputType)
+    {
+        switch (inputType)
+        {
             case Enums.InputType.Joystick:
                 DPad.SetActive(false);
                 Joystick.SetActive(true);
@@ -40,11 +42,11 @@ public class UI : MonoBehaviour
         }
     }
 
-    public void openSettings() {
-        _settingsPanel.SetActive(true);
-    }
-
-    public void SetInteractBttnInteractable(bool active) {
-        _interactBttn.GetComponent<Button>().interactable = active;
+    public void SetInteractBttnInteractable(bool active)
+    {
+        if (_interactBttn != null)
+        {
+            _interactBttn.GetComponent<Button>().interactable = active;
+        }
     }
 }

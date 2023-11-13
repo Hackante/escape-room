@@ -91,7 +91,22 @@ public class QuestUI : MonoBehaviour
         if (_questObject.CheckAnswer(_inputField.text))
         {
             onContinueCallback?.Invoke();
-            SaveLoad.Instance.saveObject.TaskBrokenBridge = 2;
+            SaveObject x = SaveLoad.Instance.saveObject;
+            switch (_questObject.QuestName)
+            {
+                case "Brücke":
+                    x.TaskBrokenBridge = 2;
+                    break;
+                case "Aufbruch":
+                    x.TaskBoatOpened = 2;
+                    break;
+                case "Schuhe":
+                    x.TaskShoesCollected = 2;
+                    break;
+                case "Kaputtes Schiff":
+                    x.TaskHoleFixed = 2;
+                    break;
+            }
             Close();
         }
         else
