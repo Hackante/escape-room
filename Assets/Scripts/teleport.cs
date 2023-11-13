@@ -8,6 +8,15 @@ public class teleport : MonoBehaviour
     [SerializeField] private string sceneName;
     [SerializeField] private Animator animator;
     [SerializeField] private float delay = 1f;
+    [SerializeField] private bool InstantStart = false;
+
+    private void Start()
+    {
+        if (InstantStart)
+        {
+            StartCoroutine(LoadSceneWithoutWaiting());
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,5 +37,11 @@ public class teleport : MonoBehaviour
     public void SetSceneName(string sceneName)
     {
         this.sceneName = sceneName;
+    }
+
+    private IEnumerator LoadSceneWithoutWaiting()
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneName);
     }
 }
