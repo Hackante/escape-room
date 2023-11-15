@@ -26,3 +26,4 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: 4c0fde45cb5df66408e6409381348857, type: 3}
   answer: 10h-14h
   layout: 1
+  saveObjectQuestName: 1
