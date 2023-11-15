@@ -30,6 +30,7 @@ public class MainMenueHandler : MonoBehaviour
 
     public void OpenMainMenue()
     {
+        SaveLoad.Instance.SavePosition();
         crossFade.SetTrigger("Start");
         StartCoroutine(LoadScene("MainMenue"));
         hideElements.trigger();

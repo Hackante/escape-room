@@ -29,4 +29,12 @@ namespace Enums
         Vertical,
         Horizontal
     }
+
+    public enum QuestNames
+    {
+        TaskBrokenBridge,
+        TaskBoatOpened,
+        TaskShoesCollected,
+        TaskHoleFixed
+    }
 }

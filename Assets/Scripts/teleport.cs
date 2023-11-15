@@ -28,9 +28,10 @@ public class teleport : MonoBehaviour
 
     public IEnumerator LoadScene()
     {
-        yield return new WaitForSeconds(delay/2);
+        SavePosition();
+        yield return new WaitForSeconds(delay / 2);
         animator.SetTrigger("Start");
-        yield return new WaitForSeconds(delay/2);
+        yield return new WaitForSeconds(delay / 2);
         SceneManager.LoadScene(sceneName);
     }
 
@@ -39,9 +40,28 @@ public class teleport : MonoBehaviour
         this.sceneName = sceneName;
     }
 
+    public void SetSceneName(int sceneIndex)
+    {
+        string sceneName = SceneUtility.GetScenePathByBuildIndex(sceneIndex);
+        this.sceneName = System.IO.Path.GetFileNameWithoutExtension(sceneName);
+    }
+
     private IEnumerator LoadSceneWithoutWaiting()
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(sceneName);
+    }
+
+    private void SavePosition()
+    {
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Elfendorf":
+                SaveObject.Instance.elfendorfPosition = new Vector3(6.55f, -21f);
+                break;
+            case "Ocean":
+                SaveObject.Instance.ozeanPosition = new Vector3(5.6f, -23.6f);
+                break;
+        }
     }
 }

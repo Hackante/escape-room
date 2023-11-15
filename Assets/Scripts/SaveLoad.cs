@@ -1,29 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Enums;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SaveLoad : MonoBehaviour
 {
-    // Singleton
     public static SaveLoad Instance { get; private set; }
     public SaveObject saveObject;
 
     public void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-            Import(PlayerPrefs.GetString("SaveObject", ""));
+        Instance = this;
+        if(SaveObject.Instance == null) {
+            new GameObject("SaveObject").AddComponent<SaveObject>();
+            this.saveObject = SaveObject.Instance;
+        } else {
+            this.saveObject = SaveObject.Instance;
         }
-        else
-        {
-            Destroy(this.gameObject);
-        }
+    }
 
-        this.saveObject = new SaveObject();
-        this.saveObject.TimeStarted = System.DateTime.Now;
+    public void Start()
+    {
+        Load();
     }
 
     public string Export()
@@ -43,30 +44,44 @@ public class SaveLoad : MonoBehaviour
         switch (SceneManager.GetActiveScene().name)
         {
             case "Elfendorf":
-                GameObject.Find("Player").transform.position = saveObject.elfendorfPosition;
+                if (saveObject.elfendorfPosition != Vector3.zero) GameObject.Find("Player").transform.position = saveObject.elfendorfPosition;
                 LoadElfendorf();
+                saveObject.CurrentScene = 3;
                 break;
-            case "Ozean":
-                GameObject.Find("Player").transform.position = saveObject.ozeanPosition;
-                // TODO: Fix Hole
+            case "Ocean":
+                if (saveObject.ozeanPosition != Vector3.zero) GameObject.Find("Player").transform.position = saveObject.ozeanPosition;
+                LoadOzean();
+                saveObject.CurrentScene = 4;
                 break;
         }
     }
 
-    public class SaveObject
+    public void SetSpawnpoint(Vector3 coordinates)
     {
-        public System.DateTime TimeStarted;
-        // Tasks have states (0 = not started, 1 = started, 2 = finished)
+        if (GameObject.Find("Player").transform == null) return;
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Elfendorf":
+                saveObject.elfendorfPosition = coordinates;
+                break;
+            case "Ocean":
+                saveObject.ozeanPosition = coordinates;
+                break;
+        }
+    }
 
-        // Elfendorf
-        public Vector3 elfendorfPosition;
-        public int TaskBrokenBridge;
-        public int TaskBoatOpened;
-        public int TaskShoesCollected;
-
-        // Ozean
-        public Vector3 ozeanPosition;
-        public int TaskHoleFixed;
+    public void SavePosition()
+    {
+        if (GameObject.Find("Player").transform == null) return;
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Elfendorf":
+                saveObject.elfendorfPosition = GameObject.Find("Player").transform.position;
+                break;
+            case "Ocean":
+                saveObject.ozeanPosition = GameObject.Find("Player").transform.position;
+                break;
+        }
     }
 
     private void LoadElfendorf()
@@ -90,5 +105,17 @@ public class SaveLoad : MonoBehaviour
         {
             GameObject.Find("Quest - Hole").GetComponent<Solve>().SolveQuest();
         }
+    }
+
+    public void CompleteQuest(QuestObject quest) {
+        if (quest == null) {
+            Debug.LogError("Quest is null");
+            return;
+        }
+        saveObject.SetValueOf(quest.saveObjectQuestName.ToString(), 2);
+    }
+
+    public void PlayButton() {
+        gameObject.GetComponent<teleport>().SetSceneName(saveObject.CurrentScene < 0 ? 3 : saveObject.CurrentScene);
     }
 }

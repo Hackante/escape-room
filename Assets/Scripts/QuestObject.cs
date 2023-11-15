@@ -17,6 +17,7 @@ public class QuestObject : ScriptableObject
     public Sprite Image { get => image; }
     public Layout Layout { get => layout; }
     public List<string> AnswersGiven { get => answersGiven; set => answersGiven = value; }
+    public QuestNames saveObjectQuestName;
     public bool CheckAnswer(string answer) {
         // Sanitize answer
         answer = answer.Trim().ToLower();

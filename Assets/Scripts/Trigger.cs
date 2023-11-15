@@ -4,6 +4,7 @@ using Enums;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Trigger : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class Trigger : MonoBehaviour
     [ConditionalHide("isTeleport", true)] public Animator crossFade;
     [ConditionalHide("isTeleport", true)] public float delay = 1f;
     [ConditionalHide("isTeleport", true)] public Vector2 playerPosition;
+    [SerializeField] private UnityEvent[] onTriggerEvents;
 
 
     private GameObject textField;
@@ -114,6 +116,10 @@ public class Trigger : MonoBehaviour
                     StartCoroutine(LoadScene(sceneName));
                 }
                 break;
+        }
+        foreach (UnityEvent unityEvent in onTriggerEvents)
+        {
+            unityEvent?.Invoke();
         }
     }
 
