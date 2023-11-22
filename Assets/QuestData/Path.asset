@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadb33376c6bd847b20896e9aa152bd, type: 3}
+  m_Name: Path
+  m_EditorClassIdentifier: 
+  questName: Waldpfad
+  questDescription: "Du kommst zu einem Stein, der sehr schwer aussieht. Es ist unm\xF6glich
+    ihn einfach so zu schieben. Aber mit dem richtigen timing klappt es bestimmt."
+  image: {fileID: 0}
+  answer: 2023
+  layout: 1
+  saveObjectQuestName: 4

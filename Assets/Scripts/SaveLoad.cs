@@ -53,6 +53,11 @@ public class SaveLoad : MonoBehaviour
                 LoadOzean();
                 saveObject.CurrentScene = 4;
                 break;
+            case "Evil -Village":
+                if (saveObject.evilVillagePosition != Vector3.zero) GameObject.Find("Player").transform.position = saveObject.evilVillagePosition;
+                LoadEvilVillage();
+                saveObject.CurrentScene = 5;
+                break;
         }
     }
 
@@ -81,6 +86,9 @@ public class SaveLoad : MonoBehaviour
             case "Ocean":
                 saveObject.ozeanPosition = GameObject.Find("Player").transform.position;
                 break;
+            case "Evil -Village":
+                saveObject.evilVillagePosition = GameObject.Find("Player").transform.position;
+                break;
         }
     }
 
@@ -104,6 +112,15 @@ public class SaveLoad : MonoBehaviour
         if (saveObject.TaskHoleFixed == 2)
         {
             GameObject.Find("Quest - Hole").GetComponent<Solve>().SolveQuest();
+        }
+    }
+
+    private void LoadEvilVillage()
+    {
+        // Path
+        if (saveObject.PathToEvilVillage == 2)
+        {
+            GameObject.Find("Quest - Path").GetComponent<Solve>().SolveQuest();
         }
     }
 

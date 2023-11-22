@@ -27,14 +27,6 @@ public class CameraShake : MonoBehaviour
         this.virtualCameraNoise = VirtualCamera.GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ShakeCamera();
-        }
-    }
-
     public void ShakeCamera()
     {
         ShakeElapsedTime = ShakeDuration;

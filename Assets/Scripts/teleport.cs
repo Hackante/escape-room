@@ -62,6 +62,12 @@ public class teleport : MonoBehaviour
             case "Ocean":
                 SaveObject.Instance.ozeanPosition = new Vector3(5.6f, -23.6f);
                 break;
+            case "Evil -Village":
+                if(GameObject.FindGameObjectWithTag("Player") != null)
+                {
+                    SaveObject.Instance.evilVillagePosition = GameObject.FindGameObjectWithTag("Player").transform.position.y < -44f ? new Vector3(5.9f, -49f) : new Vector3(3.25f, -24f);
+                }
+                break;
         }
     }
 }

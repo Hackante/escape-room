@@ -18,6 +18,9 @@ public class SaveObject : MonoBehaviour
     public int TaskHoleFixed = 0;
 
     // Evil Village
+    public Vector3 evilVillagePosition = new Vector3();
+    public int PathToEvilVillage = 0;
+
 
     public void Awake()
     {

@@ -35,6 +35,7 @@ namespace Enums
         TaskBrokenBridge,
         TaskBoatOpened,
         TaskShoesCollected,
-        TaskHoleFixed
+        TaskHoleFixed,
+        PathToEvilVillage
     }
 }
