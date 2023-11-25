@@ -32,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Settings.unity
     guid: ea194e9895354cd419b9e32bdf91d73c
+  - enabled: 1
+    path: Assets/Scenes/Katakomben.unity
+    guid: 78e152b7ef05ca247ab84e28b9b9d08c
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: d63fbbaaefaba6d42bed734f4b65ada5, type: 2}
