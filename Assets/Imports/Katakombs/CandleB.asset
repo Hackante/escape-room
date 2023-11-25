@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
   m_Name: CandleB
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: dbdb2a026593c7247bcfe6d67ac65761, type: 3}
+  - {fileID: 21300000, guid: 22e6b1255bcd3aa4da5f4e55e494d347, type: 3}
+  - {fileID: 21300000, guid: bf6dde5f6b2f18841bf4fb79a938a4ee, type: 3}
+  - {fileID: 21300000, guid: cafc4f595ea11964d83dbe23d2dc5792, type: 3}
+  m_MinSpeed: 4
+  m_MaxSpeed: 4
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0
