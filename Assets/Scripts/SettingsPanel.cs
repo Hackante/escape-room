@@ -28,7 +28,7 @@ public class SettingsPanel : MonoBehaviour
         return _instance;
     }
 
-    private void Awake()
+    private void Start()
     {
         _instance = this;
         _settings = Settings.Instance;

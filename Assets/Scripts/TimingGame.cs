@@ -8,6 +8,7 @@ public class TimingGame : MonoBehaviour
     [SerializeField] private RectTransform movingBar;
     [SerializeField] private RectTransform area;
     [SerializeField] private GameObject footer;
+    [SerializeField] private ReactionGameQuestUI reactionGameQuestUI;
 
     [SerializeField] private float speed = 1f;
     private int score = 0;
@@ -53,6 +54,7 @@ public class TimingGame : MonoBehaviour
         {
             if(score == 4) {
                 footer.SetActive(true);
+                reactionGameQuestUI.OnConfirm();
             }
             else {
                 score++;

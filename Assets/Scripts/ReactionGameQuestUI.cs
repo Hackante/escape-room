@@ -89,7 +89,6 @@ public class ReactionGameQuestUI : MonoBehaviour
             if(_inputField.text != string.Empty) {
                 if(!_questObject.AnswersGiven.Contains(_inputField.text)) {
                     _questObject.AnswersGiven.Add(_inputField.text);
-                    // TODO: Add penalty
                 }
             }
         }

@@ -3,12 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-/* TODO: below
-- Add Dialogue after impact
-- Add Quest
-- Add Other Images for the Quest
-*/
-
 public class ShipHandler : MonoBehaviour, IInteractable
 {
     [SerializeField] private float spawnOctopusTimer = 1f;
