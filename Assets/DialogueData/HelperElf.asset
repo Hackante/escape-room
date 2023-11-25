@@ -12,5 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 872c416d5dd1a814dae6b17194d96eb9, type: 3}
   m_Name: HelperElf
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - dialogue:
+    - Psssstt! Du da ich bin Norman.
+    - "Danke, dass du uns von der Gehirnw\xE4sche von Grinch-el-bart befreit hast."
+    - "Lass mich dir auch helfen. Hier ist der Schl\xFCssel zu deinen Ketten."
+    speakerName: NPC Norman
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - ... <i>KLICK</i> ...
+    speakerName: System
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - Aber ab hier kann ich dir nicht mehr weiter helfen.
+    - "Merk dir diesen Hinweis: Bilder k\xF6nnen T\xFCren \xF6ffnen."
+    - "Viel Gl\xFCck!"
+    speakerName: NPC Norman
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - Danke!
+    speakerName: Player
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
   responses: []

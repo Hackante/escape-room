@@ -21,4 +21,4 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: d932e84dccc5a3c47a06cdd099299491, type: 3}
   answer: -x^2+10x-16
   layout: 1
-  saveObjectQuestName: 0
+  saveObjectQuestName: 6

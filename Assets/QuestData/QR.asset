@@ -19,4 +19,4 @@ MonoBehaviour:
   image: {fileID: 0}
   answer: 2376
   layout: 1
-  saveObjectQuestName: 0
+  saveObjectQuestName: 7

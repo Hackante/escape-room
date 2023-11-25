@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdadb33376c6bd847b20896e9aa152bd, type: 3}
   m_Name: Code
   m_EditorClassIdentifier: 
-  questName: 
+  questName: Code
   questDescription: 
-  image: {fileID: 0}
-  answer: 
+  image: {fileID: 21300000, guid: 4a6eea7a7faaed54dbe1bfbc0530311a, type: 3}
+  answer: 472
   layout: 0
-  saveObjectQuestName: 0
+  saveObjectQuestName: 8
