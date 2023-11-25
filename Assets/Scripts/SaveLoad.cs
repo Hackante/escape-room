@@ -122,6 +122,11 @@ public class SaveLoad : MonoBehaviour
         {
             GameObject.Find("Quest - Path").GetComponent<Solve>().SolveQuest();
         }
+        // Video Tape
+        if (saveObject.VideoTape == 2)
+        {
+            GameObject.Find("Quest - Tape").GetComponent<Solve>().SolveQuest();
+        }
     }
 
     public void CompleteQuest(QuestObject quest) {

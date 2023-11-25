@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872c416d5dd1a814dae6b17194d96eb9, type: 3}
+  m_Name: EvilVillage_Propaganda
+  m_EditorClassIdentifier: 
+  dialogue:
+  - dialogue:
+    - "Elfen! Angeh\xF6rige! H\xF6rt her!\r\n"
+    speakerName: "NPC B\xF6ser Elf"
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - <i>krck</i>... Wir haben es vollbracht! Der Weihnachtsmann ist in der Festung
+      eingesperrt.
+    speakerName: NPC ???
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - <i>Ist das etwa?</i>
+    - GRINCHELBART?! Das muss er in dem Fehrnseher sein!
+    speakerName: Player
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - Die Unfairness hat ein Ende.
+    - "Nun sind alle Menschenkinder gleich und der Weihnachtsmann kann kein Unrecht
+      mehr walten lassen und die b\xF6sen Kinder belohnen"
+    - und gleichzeitig die guten bestrafen.
+    - Heute hat all dies ein Ende!
+    speakerName: Grinchelbart
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - <i>jubeln...</i>
+    speakerName: NPC Menge
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - Ohh nein, ich muss etwas unternehmen!
+    - Aber was kann ich nur tun?
+    - ...
+    - "Hmm, vielleicht kann ich irgendwo das Video l\xF6schen\u2026"
+    - Aber ich muss auch den Weihnachtsmann retten.
+    speakerName: Player
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  responses:
+  - responseText: Elfen retten...
+    dialogueObject: {fileID: 11400000, guid: 581cbd63de90de1499b5f8b9e724cfa9, type: 2}
+  - responseText: Weihnachtsmann retten
+    dialogueObject: {fileID: 0}

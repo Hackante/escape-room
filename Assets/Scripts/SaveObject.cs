@@ -20,6 +20,7 @@ public class SaveObject : MonoBehaviour
     // Evil Village
     public Vector3 evilVillagePosition = new Vector3();
     public int PathToEvilVillage = 0;
+    public int VideoTape = 0;
 
 
     public void Awake()

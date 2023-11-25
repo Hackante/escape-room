@@ -36,6 +36,7 @@ namespace Enums
         TaskBoatOpened,
         TaskShoesCollected,
         TaskHoleFixed,
-        PathToEvilVillage
+        PathToEvilVillage,
+        VideoTape
     }
 }

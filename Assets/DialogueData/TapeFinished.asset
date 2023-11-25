@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872c416d5dd1a814dae6b17194d96eb9, type: 3}
+  m_Name: TapeFinished
+  m_EditorClassIdentifier: 
+  dialogue:
+  - dialogue:
+    - Geknackt!!! Das war das Password.
+    - "Jetzt alle Videos l\xF6schen, damit die Gehirnw\xE4sche von Grinch-el-bart
+      ihre Wirkung verliert."
+    - " \u2026"
+    - " \u2026\u2026\u2026.."
+    - " \u2026\u2026\u2026.."
+    - "So! Das war das letzte Video\u2026. was ist das? Noch eine Videodatei."
+    speakerName: Player
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - "Du hast eine <color=purple>mysteri\xF6se Videodatei</color> gefunden "
+    speakerName: System
+    speakerColor: {r: 0.75166756, g: 0.3944464, b: 0.754717, a: 0}
+  - dialogue:
+    - ' Jetzt aber nichts wie los. Retten wir den Weihnachtsmann!'
+    speakerName: Player
+    speakerColor: {r: 0.75166756, g: 0.3944464, b: 0.754717, a: 0}
+  responses: []

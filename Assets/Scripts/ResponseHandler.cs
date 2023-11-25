@@ -59,7 +59,7 @@ public class ResponseHandler : MonoBehaviour
             Destroy(responseButton);
         }
         responseButtons.Clear();
-        if (responseEvents[responseIndex] != null && responseIndex <= responseEvents.Length)
+        if (responseEvents?[responseIndex] != null && responseIndex <= responseEvents.Length)
             responseEvents[responseIndex].OnPickedResponse?.Invoke();
 
         responseEvents = null;

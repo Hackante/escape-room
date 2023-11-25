@@ -14,7 +14,8 @@ public class SpeakingHandler : MonoBehaviour
         {"Special Elf", Color.magenta},
         {"Grinchelbart", Color.green},
         {"Player", Color.blue},
-        {"NPC", Color.gray}
+        {"NPC", Color.gray},
+        {"System", Color.cyan}
     };
 
     private void Start()
