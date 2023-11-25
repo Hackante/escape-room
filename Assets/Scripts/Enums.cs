@@ -37,6 +37,9 @@ namespace Enums
         TaskShoesCollected,
         TaskHoleFixed,
         PathToEvilVillage,
-        VideoTape
+        VideoTape,
+        Key,
+        FirstDoor,
+        SecondDoor
     }
 }

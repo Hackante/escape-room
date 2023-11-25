@@ -58,6 +58,10 @@ public class SaveLoad : MonoBehaviour
                 LoadEvilVillage();
                 saveObject.CurrentScene = 5;
                 break;
+            case "Katakomben":
+                if (saveObject.katakombenPosition != Vector3.zero) GameObject.Find("Player").transform.position = saveObject.katakombenPosition;
+                saveObject.CurrentScene = 6;
+                break;
         }
     }
 
@@ -71,6 +75,12 @@ public class SaveLoad : MonoBehaviour
                 break;
             case "Ocean":
                 saveObject.ozeanPosition = coordinates;
+                break;
+            case "Evil -Village":
+                saveObject.evilVillagePosition = coordinates;
+                break;
+            case "Katakomben":
+                saveObject.katakombenPosition = coordinates;
                 break;
         }
     }
@@ -88,6 +98,9 @@ public class SaveLoad : MonoBehaviour
                 break;
             case "Evil -Village":
                 saveObject.evilVillagePosition = GameObject.Find("Player").transform.position;
+                break;
+            case "Katakomben":
+                saveObject.katakombenPosition = GameObject.Find("Player").transform.position;
                 break;
         }
     }
@@ -126,6 +139,25 @@ public class SaveLoad : MonoBehaviour
         if (saveObject.VideoTape == 2)
         {
             GameObject.Find("Quest - Tape").GetComponent<Solve>().SolveQuest();
+        }
+    }
+
+    private void LoadKatakomben()
+    {
+        // Key
+        if (saveObject.Key == 2)
+        {
+            GameObject.Find("Quest - Key").GetComponent<Solve>().SolveQuest();
+        }
+        // First Door
+        if (saveObject.FirstDoor == 2)
+        {
+            GameObject.Find("Quest - LockedDoor").GetComponent<Solve>().SolveQuest();
+        }
+        // Second Door
+        if (saveObject.SecondDoor == 2)
+        {
+            GameObject.Find("Quest - Code").GetComponent<Solve>().SolveQuest();
         }
     }
 

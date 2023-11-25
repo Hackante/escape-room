@@ -22,6 +22,13 @@ public class SaveObject : MonoBehaviour
     public int PathToEvilVillage = 0;
     public int VideoTape = 0;
 
+    // Katakomben
+    public Vector3 katakombenPosition = new Vector3();
+    public int Key = 0;
+    public int FirstDoor = 0;
+    public int SecondDoor = 0;
+    public int Tunnels = 0;     
+
 
     public void Awake()
     {

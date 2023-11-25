@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdadb33376c6bd847b20896e9aa152bd, type: 3}
+  m_Name: Key
+  m_EditorClassIdentifier: 
+  questName: "Schl\xFCssel"
+  questDescription: "Du siehst ein paar Meter von dir entfernt einen Schl\xFCssel,
+    der dich befreien k\xF6nnte. Die einzige M\xF6glichkeit diesen zu erreichen,
+    w\xE4re indem du eine Angel mit Magnet in der richigen Flugbahn wirfst. \nDu
+    befindest dich bei <b>x=2</b>. Sch\xE4tzte die Stelle des Schl\xFCssels und gib
+    die Formel in der Form <b>ax^2+bx+c</b> an und vereinfache diese soweit wie m\xF6glich."
+  image: {fileID: 21300000, guid: d932e84dccc5a3c47a06cdd099299491, type: 3}
+  answer: -x^2+10x-16
+  layout: 1
+  saveObjectQuestName: 0
