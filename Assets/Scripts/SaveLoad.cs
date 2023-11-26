@@ -14,10 +14,13 @@ public class SaveLoad : MonoBehaviour
     public void Awake()
     {
         Instance = this;
-        if(SaveObject.Instance == null) {
+        if (SaveObject.Instance == null)
+        {
             new GameObject("SaveObject").AddComponent<SaveObject>();
             this.saveObject = SaveObject.Instance;
-        } else {
+        }
+        else
+        {
             this.saveObject = SaveObject.Instance;
         }
     }
@@ -60,6 +63,7 @@ public class SaveLoad : MonoBehaviour
                 break;
             case "Katakomben":
                 if (saveObject.katakombenPosition != Vector3.zero) GameObject.Find("Player").transform.position = saveObject.katakombenPosition;
+                LoadKatakomben();
                 saveObject.CurrentScene = 6;
                 break;
         }
@@ -144,9 +148,16 @@ public class SaveLoad : MonoBehaviour
 
     private void LoadKatakomben()
     {
+        if (saveObject.VideoTape == 2)
+        {
+            GameObject.Find("Task - Key").SetActive(false);
+        } else {
+            GameObject.Find("HelperElf").SetActive(false);
+        }
         // Key
         if (saveObject.Key == 2)
         {
+            GameObject.Find("HelperElf").SetActive(false);
             GameObject.Find("Quest - Key").GetComponent<Solve>().SolveQuest();
         }
         // First Door
@@ -159,17 +170,25 @@ public class SaveLoad : MonoBehaviour
         {
             GameObject.Find("Quest - Code").GetComponent<Solve>().SolveQuest();
         }
+        // Tunnels
+        if (saveObject.Tunnels == 2)
+        {
+            GameObject.Find("Quest - Tunnels").GetComponent<Solve>().SolveQuest();
+        }
     }
 
-    public void CompleteQuest(QuestObject quest) {
-        if (quest == null) {
+    public void CompleteQuest(QuestObject quest)
+    {
+        if (quest == null)
+        {
             Debug.LogError("Quest is null");
             return;
         }
         saveObject.SetValueOf(quest.saveObjectQuestName.ToString(), 2);
     }
 
-    public void PlayButton() {
+    public void PlayButton()
+    {
         gameObject.GetComponent<teleport>().SetSceneName(saveObject.CurrentScene < 0 ? 3 : saveObject.CurrentScene);
     }
 }

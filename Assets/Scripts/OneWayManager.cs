@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-// FIXME: Frage 2 wird ausgelassen bei der anzeige (index 1) antworten um 1 verschoben
 
 public class OneWayManager : MonoBehaviour
 {
@@ -13,6 +12,7 @@ public class OneWayManager : MonoBehaviour
     [SerializeField] private TextMeshPro frageText2;
     [SerializeField] private Transform bossRoomSpawn;
     [SerializeField] private Transform playerTransform;
+    [SerializeField] private Animator crossFade;
 
     private void Start()
     {
@@ -20,16 +20,19 @@ public class OneWayManager : MonoBehaviour
         frageText2.text = fragen[current + 1].text;
     }
 
-    public bool Next(string antwort)
+    public bool? Next(string antwort)
     {
         if (antwort == fragen[current].antwort.ToString())
         {
             current++;
-            if (!(current + 1 >= fragen.Length)) _ = current % 2 == 0 ? frageText1.text = fragen[current + 1].text : frageText2.text = fragen[current + 1].text;
+            if (!(current + 1 >= fragen.Length)) _ = current % 2 == 0 ? frageText2.text = fragen[current + 1].text : frageText1.text = fragen[current + 1].text;
             if (current == fragen.Length)
             {
+                crossFade.SetTrigger("Start");
                 playerTransform.position = bossRoomSpawn.position;
+                crossFade.SetTrigger("End");
                 SaveObject.Instance.SetValueOf("Tunnels", 2);
+                return null;
             }
             return true;
         }

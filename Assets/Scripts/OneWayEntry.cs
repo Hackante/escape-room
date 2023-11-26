@@ -14,11 +14,12 @@ public class OneWayEntry : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if(oneWayManager.Next(gameObject.name)) {
+            bool? result = oneWayManager.Next(gameObject.name);
+            if(result != null && result.Value) {
                 crossFade.SetTrigger("Start");
                 playerTransform.position = destination.position;
                 crossFade.SetTrigger("End");
-            } else {
+            } else if(result != null && !result.Value) {
                 crossFade.SetTrigger("Start");
                 playerTransform.position = wrongDestination.position;
                 crossFade.SetTrigger("End");
