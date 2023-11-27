@@ -10,6 +10,7 @@ public class UI : MonoBehaviour
     [SerializeField] private GameObject _controls;
     [SerializeField] private GameObject DPad;
     [SerializeField] private GameObject Joystick;
+    [SerializeField] private GameObject HomeButton;
 
 
     public static UI Instance { get; private set; }
@@ -48,5 +49,12 @@ public class UI : MonoBehaviour
         {
             _interactBttn.GetComponent<Button>().interactable = active;
         }
+    }
+
+    public void HideButtons()
+    {
+        HomeButton.SetActive(false);
+        _interactBttn.SetActive(false);
+        _controls.SetActive(false);
     }
 }
