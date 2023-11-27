@@ -557,6 +557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textLabel: {fileID: 1700428388750303892}
   dialogueBox: {fileID: 6842064676164438331}
+  closeEvents: []
   hideUIElements:
   - {fileID: 589177727059207162}
   - {fileID: 7373320520533704803}
@@ -7012,6 +7013,7 @@ MonoBehaviour:
   _controls: {fileID: 589177727059207162}
   DPad: {fileID: 156944638732327825}
   Joystick: {fileID: 5605808740344933834}
+  HomeButton: {fileID: 4720032882503086594}
 --- !u!1 &5781446074605590752
 GameObject:
   m_ObjectHideFlags: 0

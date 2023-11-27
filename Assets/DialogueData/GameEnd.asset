@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872c416d5dd1a814dae6b17194d96eb9, type: 3}
+  m_Name: GameEnd
+  m_EditorClassIdentifier: 
+  dialogue:
+  - dialogue:
+    - 'Oh nein! Wie kann das sein? '
+    - Aber du bist einfach zu gut. Das muss ich dir lassen.
+    - Ich bin wieder in Weihnachtsstimmung?!
+    - Aber ich hasse Weihnachten doch seit ich ein Kind war!
+    speakerName: Grinchelbart
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - Hohoho, vielen Dank, dass du mich gerettet hast.
+    - "Weihnachten ist ein Fest f\xFCr alle! Auch f\xFCr dich Grinchelbart."
+    - "Obwohl du mich dieses Jahr entf\xFChrt hast. Aber ich vergebe dir selbstverst\xE4ndlich"
+    - Verrate mir nur eins, woher kommt dein Hass auf Weihnachten?
+    speakerName: Santa
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - "<i>Erz\xE4hlt die Geschichte mit dem Brief und dem Geschenk f\xFCr Bart-el-Grinch</i>"
+    speakerName: Grinchelbart
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - ABER NEIN?! Das darf doch nicht wahr sein?!
+    - Ich bin mir 100% sicher, dass alles richtig war...
+    - "OH NEIN! Jetzt f\xE4llt es mir wieder ein!"
+    - Dein Bruder ist aufgestanden kurz bevor ich raus bin.
+    - "Er muss wohl die Namen ver\xE4ndert haben!"
+    speakerName: Santa
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - HAHAHAHAHA! Nach all den Jahren seit ihr drauf gekommen!
+    - "Uhhh ich freu mich schon auf n\xE4chste Weihnachten wenn ich jemand neues
+      manipuliert habe... HAHAHAHAHA!"
+    speakerName: Bart-el-Grinch
+    speakerColor: {r: 1, g: 0.23945448, b: 0, a: 1}
+  - dialogue:
+    - Oh nein!
+    - Bitte nicht...
+    speakerName: Player
+    speakerColor: {r: 1, g: 0.23945448, b: 0, a: 1}
+  - dialogue:
+    - ...
+    - To be continued oder so? Oder auch nicht?
+    speakerName: System
+    speakerColor: {r: 1, g: 0.23945448, b: 0, a: 1}
+  responses: []
