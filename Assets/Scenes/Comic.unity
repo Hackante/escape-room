@@ -225,6 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 639243324}
   - component: {fileID: 639243326}
+  - component: {fileID: 639243327}
   m_Layer: 0
   m_Name: comic
   m_TagString: Untagged
@@ -299,6 +300,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &639243327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639243322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621dad231d42d9b4fa6feecdb3e4540a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images:
+  - {fileID: 21300000, guid: bd4ff1dc850689947a40cb772f8fed7d, type: 3}
+  - {fileID: 21300000, guid: 1578c6bb9616d634698af13547df241d, type: 3}
+  - {fileID: 21300000, guid: bbc0e7a2928e8734990036190f51716e, type: 3}
+  - {fileID: 21300000, guid: 1f74043ad6f19394c806c807370c7443, type: 3}
+  - {fileID: 21300000, guid: 1746e8a09e75262498c21379f6fd6888, type: 3}
+  - {fileID: 21300000, guid: 6fe22aa100e928445bd90e23bcddf4d3, type: 3}
+  - {fileID: 21300000, guid: af5a345eb86f7044ea953c4d15dd42f9, type: 3}
+  - {fileID: 21300000, guid: 3c119d32e17583f4e9b319317b7b6f8a, type: 3}
+  - {fileID: 21300000, guid: 703be382c827fbf4ea6d2890413bac33, type: 3}
+  - {fileID: 21300000, guid: 8fbc38fdf43232143a30e08b75f43c86, type: 3}
+  - {fileID: 21300000, guid: 9acb47139db9b044292dbed3552df309, type: 3}
+  - {fileID: 21300000, guid: 69696429cbd76e447b9719e3c70f9cc5, type: 3}
+  - {fileID: 21300000, guid: d0ae221a1ee9ba54d942407493850be8, type: 3}
+  - {fileID: 21300000, guid: 81ef5d8e52c60834180e5ebde1c597d1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
