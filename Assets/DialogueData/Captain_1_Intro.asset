@@ -29,5 +29,5 @@ MonoBehaviour:
     speakerName: NPC Captain
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   responses:
-  - responseText: Aufgbe annehmen
+  - responseText: Aufgabe annehmen
     dialogueObject: {fileID: 0}
