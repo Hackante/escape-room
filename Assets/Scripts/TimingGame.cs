@@ -49,7 +49,7 @@ public class TimingGame : MonoBehaviour
     // If the player is right, the game is won.
     private void Update()
     {
-        if(!Input.GetKeyDown(KeyCode.Space)) return;
+        if(!Input.GetKeyDown(KeyCode.Space) && !Input.GetMouseButtonDown(0)) return;
         if (IsInArea())
         {
             if(score == 4) {
