@@ -8,10 +8,10 @@ public class ComicNextImage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    
+
     public Sprite[] images;
     private int currentIndex = 0;
 
@@ -20,44 +20,48 @@ public class ComicNextImage : MonoBehaviour
 
     private void Update()
     {
-        if(currentIndex == 14)
+        if (currentIndex == 14)
         {
             SceneManager.LoadScene("Elfendorf");
         }
-        if(!Input.GetKeyDown(KeyCode.Space) && !Input.GetMouseButtonDown(0)) return;
+        if (!Input.GetKeyDown(KeyCode.Space) && !Input.GetMouseButtonDown(0)) return;
         ShowNextImage();
-        
+
     }
 
 
     public void ShowNextImage()
-    {        
-            currentIndex++;
-            // Change the shown image here using the currentIndex
-            GetComponent<SpriteRenderer>().sprite = images[currentIndex];
-            if (currentIndex == 3)
-            {
-                MoveCameraDown(-4);
-            }
-            if (currentIndex == 5)
-            {
-                MoveCameraDown(-15);
-            }
-            if (currentIndex == 8)
-            {
-                MoveCameraDown(-30);
-            }
-            if (currentIndex == 11)
-            {
-                MoveCameraDown(-47);
-            }
-            if (currentIndex == 13)
-            {
-                Vector3 StartingPosition = new Vector3(0, 30, -10);
-                Camera.main.transform.position = StartingPosition;
-                MoveCameraDown(97);
+    {
+        currentIndex++;
+        if (currentIndex == images.Length)
+        {
+            return;
         }
-        
+        // Change the shown image here using the currentIndex
+        GetComponent<SpriteRenderer>().sprite = images[currentIndex];
+        if (currentIndex == 3)
+        {
+            MoveCameraDown(-3.8f);
+        }
+        if (currentIndex == 5)
+        {
+            MoveCameraDown(-11.6f);
+        }
+        if (currentIndex == 8)
+        {
+            MoveCameraDown(-19.4f);
+        }
+        if (currentIndex == 11)
+        {
+            MoveCameraDown(-23.9f);
+        }
+        if (currentIndex == 13)
+        {
+            Vector3 StartingPosition = new Vector3(0, 30, -10);
+            Camera.main.transform.position = StartingPosition;
+            MoveCameraDown(2.7f);
+        }
+
     }
 
     private void MoveCameraDown(float yValue)
@@ -71,17 +75,16 @@ public class ComicNextImage : MonoBehaviour
 
     private IEnumerator MoveCamera(Vector3 targetPosition)
     {
-        while (Camera.main.transform.position != targetPosition)
+        float duration = 1f;
+        float elapsedTime = 0f;
+        Vector3 startingPosition = Camera.main.transform.position;
+        while (elapsedTime < duration)
         {
-
-             // Move the camera towards the target position using Lerp
-            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, targetPosition, Time.deltaTime * cameraMoveSpeed);
-
+            Camera.main.transform.position = Vector3.Lerp(startingPosition, targetPosition, (elapsedTime / duration));
+            elapsedTime += Time.deltaTime;
             yield return null;
-            
         }
+        Camera.main.transform.position = targetPosition;
     }
-
-
 }
 
