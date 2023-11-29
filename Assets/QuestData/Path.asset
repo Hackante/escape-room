@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questName: Waldpfad
   questDescription: "Du kommst zu einem Stein, der sehr schwer aussieht. Es ist unm\xF6glich
-    ihn einfach so zu schieben. Aber mit dem richtigen timing klappt es bestimmt."
+    ihn einfach so zu schieben. Aber mit dem richtigen timing klappt es bestimmt.\n<i>Hinweis:
+    Nutze [Leertaste] oder [RechteMaustaste]</i>"
   image: {fileID: 0}
   answer: 2023
   layout: 1

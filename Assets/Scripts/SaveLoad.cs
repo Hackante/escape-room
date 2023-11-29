@@ -189,6 +189,6 @@ public class SaveLoad : MonoBehaviour
 
     public void PlayButton()
     {
-        gameObject.GetComponent<teleport>().SetSceneName(saveObject.CurrentScene < 0 ? 3 : saveObject.CurrentScene);
+        gameObject.GetComponent<teleport>().SetSceneName(saveObject.CurrentScene < 0 ? 8 : saveObject.CurrentScene);
     }
 }

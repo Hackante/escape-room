@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class BossFight : MonoBehaviour
 {
     [SerializeField] private UI ui;
+    [SerializeField] private GameObject trigger;
     [Header("Player")]
     [SerializeField] private Slider playerHealthBar;
     [SerializeField] private GameObject playerBubbleAnchor;
@@ -243,6 +244,7 @@ public class BossFight : MonoBehaviour
         {
             // Lose
             StartCoroutine(Endscreen(false));
+            trigger.SetActive(false);
         }
         else
         {

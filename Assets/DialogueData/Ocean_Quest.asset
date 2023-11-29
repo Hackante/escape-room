@@ -17,7 +17,7 @@ MonoBehaviour:
     - "ARGHH!!! Das Ungeheuer hat einen m\xE4chtigen Schaden an meinem Schiff hinterlassen."
     - "So k\xF6nnen wir unm\xF6glich weiterfahren\u2026<i>Seufz</i>\u2026"
     - ' Kannst du mir helfen den Schaden zu beheben?'
-    speakerName: NPC Captain
+    speakerName: "NPC Kapit\xE4n Kre\xDF"
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   responses:
   - responseText: Aufgabe annehmen

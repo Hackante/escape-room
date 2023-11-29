@@ -19,16 +19,16 @@ MonoBehaviour:
       ihre Wirkung verliert."
     - " \u2026"
     - " \u2026\u2026\u2026.."
-    - " \u2026\u2026\u2026.."
     - "So! Das war das letzte Video\u2026. was ist das? Noch eine Videodatei."
     speakerName: Player
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   - dialogue:
-    - "Du hast eine <color=purple>mysteri\xF6se Videodatei</color> gefunden "
+    - Du hast den <color=purple>Geist der Weihnacht</color> gefunden. Die Elfen sind
+      dir jetzt gut gesonnen.
     speakerName: System
     speakerColor: {r: 0.75166756, g: 0.3944464, b: 0.754717, a: 0}
   - dialogue:
-    - ' Jetzt aber nichts wie los. Retten wir den Weihnachtsmann!'
+    - Jetzt aber nichts wie los. Retten wir den Weihnachtsmann!
     speakerName: Player
     speakerColor: {r: 0.75166756, g: 0.3944464, b: 0.754717, a: 0}
   responses: []

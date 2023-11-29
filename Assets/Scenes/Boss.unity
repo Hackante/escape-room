@@ -1572,6 +1572,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7698235539659597455, guid: 87dbefb61ec31c742a1c8c9710430ea2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: openCredits
+      objectReference: {fileID: 0}
     - target: {fileID: 7813769181955419737, guid: 87dbefb61ec31c742a1c8c9710430ea2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2343,6 +2347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1128472558}
+  trigger: {fileID: 2127020510}
   playerHealthBar: {fileID: 2087847360}
   playerBubbleAnchor: {fileID: 312368155}
   playerBubbleText: {fileID: 1142418018}
@@ -2751,6 +2756,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3241735977389369588, guid: 13265add6057d884887940682ce8179c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e2cd4b0dff26c2640a853f4dbf38abb6, type: 3}
     - target: {fileID: 5695878467705989203, guid: 13265add6057d884887940682ce8179c, type: 3}
       propertyPath: m_Name
       value: Music
@@ -3814,6 +3823,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271375326}
   m_CullTransparentMesh: 1
+--- !u!1 &1287396642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4720032882503086594, guid: 87dbefb61ec31c742a1c8c9710430ea2, type: 3}
+  m_PrefabInstance: {fileID: 262709192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1330059455
 GameObject:
   m_ObjectHideFlags: 0
@@ -6132,7 +6146,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueObject: {fileID: 11400000, guid: 48a5afc3f3954bd49ba6b44f88d80db8, type: 2}
-  closeEvents: []
+  closeEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1287396642}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   useCloseEvents: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
