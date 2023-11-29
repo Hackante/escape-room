@@ -5,28 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class ComicNextImage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-
     public Sprite[] images;
     private int currentIndex = 0;
-
-    private float cameraMoveSpeed = 2f; // Adjust the speed as needed
+    [SerializeField] private Animator crossFade;
 
 
     private void Update()
     {
         if (currentIndex == 14)
         {
+            crossFade.SetTrigger("Start");
             SceneManager.LoadScene("Elfendorf");
         }
         if (!Input.GetKeyDown(KeyCode.Space) && !Input.GetMouseButtonDown(0)) return;
         ShowNextImage();
-
     }
 
 
