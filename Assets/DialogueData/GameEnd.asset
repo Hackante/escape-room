@@ -33,7 +33,7 @@ MonoBehaviour:
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   - dialogue:
     - ABER NEIN?! Das darf doch nicht wahr sein?!
-    - Ich bin mir 100% sicher, dass alles richtig war...
+    - Ich bin mir 101% sicher, dass alles richtig war...
     - "OH NEIN! Jetzt f\xE4llt es mir wieder ein!"
     - Dein Bruder ist aufgestanden kurz bevor ich raus bin.
     - "Er muss wohl die Namen ver\xE4ndert haben!"
@@ -41,7 +41,7 @@ MonoBehaviour:
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   - dialogue:
     - HAHAHAHAHA! Nach all den Jahren seit ihr drauf gekommen!
-    - "Uhhh ich freu mich schon auf n\xE4chste Weihnachten wenn ich jemand neues
+    - "Uhhh ich freu mich schon auf n\xE4chste Weihnachten, wenn ich jemand neues
       manipuliert habe... HAHAHAHAHA!"
     speakerName: Bart-el-Grinch
     speakerColor: {r: 1, g: 0.23945448, b: 0, a: 1}

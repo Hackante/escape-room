@@ -19,7 +19,7 @@ MonoBehaviour:
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   - dialogue:
     - "Die Br\xFCcke zum Hafen ist kaputt! Ich brauche Holz um sie zu reparieren."
-    - Kannst du mir vielleicht etwas von deinem Holz abgebebn?
+    - Kannst du mir vielleicht etwas von deinem Holz abgebeben?
     speakerName: Player
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   - dialogue:

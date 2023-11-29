@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogue:
   - dialogue:
     - Na? Wohin geht die Reise?
-    speakerName: NPC Captain
+    speakerName: "NPC Kapit\xE4n Kre\xDF"
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   responses:
   - responseText: Zum Elfendorf

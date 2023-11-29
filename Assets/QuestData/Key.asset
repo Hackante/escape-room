@@ -17,7 +17,8 @@ MonoBehaviour:
     der dich befreien k\xF6nnte. Die einzige M\xF6glichkeit diesen zu erreichen,
     w\xE4re indem du eine Angel mit Magnet in der richigen Flugbahn wirfst. \nDu
     befindest dich bei <b>x=2</b>. Sch\xE4tzte die Stelle des Schl\xFCssels und gib
-    die Formel in der Form <b>ax^2+bx+c</b> an und vereinfache diese soweit wie m\xF6glich."
+    die Formel der Flugnahm in folgender Form an <b>ax^2+bx+c</b> und vereinfache
+    diese soweit wie m\xF6glich."
   image: {fileID: 21300000, guid: d932e84dccc5a3c47a06cdd099299491, type: 3}
   answer: -x^2+10x-16
   layout: 1

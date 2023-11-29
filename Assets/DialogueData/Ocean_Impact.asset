@@ -21,6 +21,6 @@ MonoBehaviour:
     - BEIM KLABAUTERMANN, EIN SEEUNGEHEUER!
     - SCHNELL ZU DEN KANONEN!!!
     - ' DAS VIECH GREIFT UNS AN!'
-    speakerName: NPC Captain
+    speakerName: "NPC Kapit\xE4n Kre\xDF"
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   responses: []

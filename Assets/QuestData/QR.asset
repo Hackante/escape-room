@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questName: Verstecktes Zahlenschloss
   questDescription: "Du kommst hier nicht weiter. Wenn du einfach so weiter l\xE4ufst,
-    w\xFCrden dich die Stackeln verletzen. Gib den richitgen Code ein, um sie zu
+    w\xFCrden dich die Stacheln verletzen. Gib den richitgen Code ein, um sie zu
     deaktivieren."
   image: {fileID: 0}
   answer: 2376

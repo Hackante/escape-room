@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questName: Kaputtes Schiff
   questDescription: "Das Seeungeheuer hat ein gro\xDFes Loch im Schiff hinterlassen.
-    Um weiterzufahren muss dieses Loch geflickt werden. Zum Gl\xFCck hat der Kapit\xE4n
-    S\xE4gesp\xE4ne und Holzleim auf seinen Schiff. Mit einer Mischung aus den beiden
-    kann ein Material zu flicken des Lochs hergestellt werden. Aber da der Prozess
-    sehr schwierig ist und der Kapit\xE4n ein Umweltaktivist ist m\xF6chte er keine
-    Ressourcen verschwenden. Deswegen bittet er dich das Volumen des Loch zu berechnen.
-    Rechne die Fl\xE4che links aus mit <b>a=2cm</b> und <b>b=3cm</b>. F\xFCr die
-    H\xF6he kannst du <b>5cm</b> annehmen. Gib das gerundete Vomumen in cm<sup>3</sup>
-    an.\r"
+    Um weiterzufahren, muss dieses Loch geschlossen werden. Zum Gl\xFCck hat  Kapit\xE4n
+    Kre\xDF S\xE4gesp\xE4ne und Holzleim auf ihrem Schiff. Mit einer Mischung aus
+    den beiden kann ein Material zum Schlie\xDFen des Lochs hergestellt werden. Aber
+    da der Prozess sehr schwierig ist und  Kapit\xE4n Kre\xDF die Umwelt sehr am
+    Herzen liegt, m\xF6chte sie keine Ressourcen verschwenden. Deswegen bittet sie
+    dich das Volumen des Lochs zu berechnen. Rechne die Fl\xE4che links aus mit <b>a=2cm</b>
+    und <b>b=3cm</b>. F\xFCr die H\xF6he kannst du <b>5cm</b> annehmen. Gib das gerundete
+    Vomumen in cm<sup>3</sup> an.\r"
   image: {fileID: 21300000, guid: 802379999c7b45e4c967e04fa2cc2f0b, type: 3}
-  answer: 54
+  answer: 270
   layout: 1
   saveObjectQuestName: 3

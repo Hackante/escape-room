@@ -17,13 +17,13 @@ MonoBehaviour:
     Wasserstand am Nordpol dokumentiert und daraus eine Formel entwickelt, die den
     Wasserstand zu bestimmten Uhrzeiten ermittelt. Das Schiff kann nur bei einen
     bestimmten Wasserstand sicher in die See stechen, sonst kentert es. Leider hat
-    der jetzige Kapit\xE4n nicht besonders auf die Formel gut achtgegeben und sie
-    ist besch\xE4digt worden. Er hat sich aber gemerkt, dass die Formel f\xFCr den
+    die jetzige Kapit\xE4nin nicht besonders auf die Formel gut achtgegeben und sie
+    ist besch\xE4digt worden. Sie hat sich aber gemerkt, dass die Formel f\xFCr den
     idealen Wasserstand <b>f(x) = ((1)/(2)) x*2+2<sup>2</sup>-x+2 ((8)/(4))</b> lautet
     und die Formel f\xFCr den aktuellen Wasserstand <b>g(x) = -0.05 (x-12)<sup>2</sup>+8.2</b>.
     Ermittle die Uhrzeit zu der es sicher ist, den Hafen zu verlassen. Gib das Ergebnis
-    in folgender Form an z.B. : <b>45h - 56h</b>.\r\n"
-  image: {fileID: 21300000, guid: 4c0fde45cb5df66408e6409381348857, type: 3}
+    in folgender Form an z.B. : <b>45h-56h</b>.\r"
+  image: {fileID: 0}
   answer: 10h-14h
   layout: 1
   saveObjectQuestName: 1
