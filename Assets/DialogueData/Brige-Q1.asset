@@ -19,14 +19,14 @@ MonoBehaviour:
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   - dialogue:
     - "Die Br\xFCcke zum Hafen ist kaputt! Ich brauche Holz um sie zu reparieren."
-    - Kannst du mir vielleicht etwas von deinem Holz abgebeben?
+    - Kannst du mir vielleicht etwas von deinem Holz abgeben?
     speakerName: Player
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   - dialogue:
-    - "Na wenn das so ist, nat\xFCrlich. Wie viel brauchst du denn? Du musst wissen
-      Holz ist hier sehr nachgefragt. Wir verschwenden nichts!"
+    - "Na wenn das so ist, nat\xFCrlich. Aber ich ben\xF6tige im Gegensatz auch deine
+      Hilfe."
     speakerName: NPC Gideon
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   responses:
-  - responseText: Ausrechnen...
+  - responseText: Helfen
     dialogueObject: {fileID: 0}

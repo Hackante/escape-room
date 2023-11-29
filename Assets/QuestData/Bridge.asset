@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Bridge
   m_EditorClassIdentifier: 
   questName: "Br\xFCcke"
-  questDescription: "Die Br\xFCcke der Elfen ist kaputt. Zum reparieren ben\xF6tigst
-    du Holz, dass du von Gideon kaufst. Ein Stamm kostet bei ihm <b>{Preis}</b>,
-    wobei dieser <b>1,5m</b> lang ist und einen Durchmesser von <b>50cm</b> hat.
-    Wie viel Volumen hat ein Stamm in m<sup>3</sup>"
-  image: {fileID: 0}
-  answer: 0.3
+  questDescription: "Die Br\xFCcke der Elfen ist kaputt. Zum Reparieren ben\xF6tigst
+    du Holz, dass du von Gideon holst. Er braucht allerdings auch deine Hilfe. F\xFCr
+    seine Preise nutzt Gideon immer eine Formel. Die ist allerdings etwas durcheinandergeraten.
+    L\xF6se die Formel nach y auf und gib die Formel in der Form ax^2+bx+c an. Schreibe
+    a als vollst\xE4ndiggek\xFCrzten Bruch (d/e). Beispiel: (2/3)x^2-9x+0"
+  image: {fileID: 21300000, guid: 6140fb158d23438448da7223e27c2e6f, type: 3}
+  answer: (1/12)x^2+0x+4
   layout: 1
+  saveObjectQuestName: 0
