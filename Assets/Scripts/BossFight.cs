@@ -261,6 +261,7 @@ public class BossFight : MonoBehaviour
         if (win)
         {
             StartCoroutine(Fade(endscreenTextWin));
+            trigger.SetActive(true);
         }
         else
         {
