@@ -3499,12 +3499,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1507205257269744623, guid: b91f1485a24f6474d9004e58769a3f0d, type: 3}
+      propertyPath: crossFade
+      value: 
+      objectReference: {fileID: 1074426375}
+    - target: {fileID: 1507205257269744623, guid: b91f1485a24f6474d9004e58769a3f0d, type: 3}
+      propertyPath: sceneName
+      value: Ending
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507205257269744623, guid: b91f1485a24f6474d9004e58769a3f0d, type: 3}
       propertyPath: isDialogue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507205257269744623, guid: b91f1485a24f6474d9004e58769a3f0d, type: 3}
+      propertyPath: isTeleport
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1507205257269744623, guid: b91f1485a24f6474d9004e58769a3f0d, type: 3}
       propertyPath: triggerType
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1507205257269744623, guid: b91f1485a24f6474d9004e58769a3f0d, type: 3}
       propertyPath: dialogueObject
@@ -4652,7 +4664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1576778564
 Transform:
   m_ObjectHideFlags: 0
