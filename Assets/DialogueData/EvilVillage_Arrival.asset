@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - dialogue:
-    - " Was sind das f\xFCr Ger\xE4usche?"
+    - " Was sind das f\xFCr Ger\xE4usche, die von links kommen?"
     - "H\xF6rt sich an wie ein Fest."
     speakerName: Player
     speakerColor: {r: 0, g: 0, b: 0, a: 0}

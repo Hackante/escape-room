@@ -2365,7 +2365,7 @@ MonoBehaviour:
     - 48
     - 42
     - 49
-    richtigeAntwort: 2
+    richtigeAntwort: 0
   - aufgabe: 3<sup>3</sup>
     antworten:
     - 9
@@ -2421,7 +2421,7 @@ MonoBehaviour:
     - 2*2
     - 4<sup>2</sup>
     - 4*4
-    richtigeAntwort: 2
+    richtigeAntwort: 0
   damageTakenBlock: 5
   damageTakenDodgeMiss: 10
   damageDealtDodgeSuccess: 5

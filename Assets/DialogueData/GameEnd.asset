@@ -44,7 +44,7 @@ MonoBehaviour:
     - "Uhhh ich freu mich schon auf n\xE4chste Weihnachten, wenn ich jemand neues
       manipuliert habe... HAHAHAHAHA!"
     speakerName: Bart-el-Grinch
-    speakerColor: {r: 1, g: 0.23945448, b: 0, a: 1}
+    speakerColor: {r: 0.48635912, g: 0, b: 1, a: 1}
   - dialogue:
     - Oh nein!
     - Bitte nicht...

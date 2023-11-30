@@ -18,11 +18,9 @@ MonoBehaviour:
     Wasserstand zu bestimmten Uhrzeiten ermittelt. Das Schiff kann nur bei einen
     bestimmten Wasserstand sicher in die See stechen, sonst kentert es. Leider hat
     die jetzige Kapit\xE4nin nicht besonders auf die Formel gut achtgegeben und sie
-    ist besch\xE4digt worden. Sie hat sich aber gemerkt, dass die Formel f\xFCr den
-    idealen Wasserstand <b>f(x) = ((1)/(2)) x*2+2<sup>2</sup>-x+2 ((8)/(4))</b> lautet
-    und die Formel f\xFCr den aktuellen Wasserstand <b>g(x) = -0.05 (x-12)<sup>2</sup>+8.2</b>.
-    Ermittle die Uhrzeit zu der es sicher ist, den Hafen zu verlassen. Gib das Ergebnis
-    in folgender Form an z.B. : <b>45h-56h</b>.\r"
+    ist besch\xE4digt worden. Die Formeln, die sie retten konnte, sind drau\xDFen
+    auf der gro\xDFen Tafel aufgehangen. Ermittle die Uhrzeit, zu der es sicher ist,
+    den Hafen zu verlassen. Gib das Ergebnis in folgender Form an z.B. : <b>45h-56h</b>.\r"
   image: {fileID: 0}
   answer: 10h-14h
   layout: 1

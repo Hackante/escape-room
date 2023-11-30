@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872c416d5dd1a814dae6b17194d96eb9, type: 3}
+  m_Name: StartingDialog
+  m_EditorClassIdentifier: 
+  dialogue:
+  - dialogue:
+    - Hey! Du!
+    speakerName: NPC Nieberlein
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - "\u2026?"
+    speakerName: Player
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - Genau du!
+    - Hilf uns! Weihnachten ist in Gefahr!
+    - "Der b\xF6se Grinch-el-bart hat den Weihnachtsmann entf\xFChrt."
+    - Hilf uns den Weihnachtsmann zu befreien, um so Weihnachten zu retten.
+    speakerName: NPC Nieberlein
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - Na klar! Was soll ich tun?
+    speakerName: Player
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  - dialogue:
+    - "Grinch-el-bart wohnt am S\xFCdpol, du musst also erstmal durch den Wald zur
+      K\xFCste."
+    - "Dort wartet Kapit\xE4n Kre\xDF auf dich, sie kann dich zum S\xFCdpol bringen."
+    - Viel Erfolg!
+    speakerName: NPC Nieberlein
+    speakerColor: {r: 0, g: 0, b: 0, a: 0}
+  responses:
+  - responseText: Rette Santa
+    dialogueObject: {fileID: 0}
