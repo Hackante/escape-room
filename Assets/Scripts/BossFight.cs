@@ -61,6 +61,10 @@ public class BossFight : MonoBehaviour
     private void Start()
     {
         ui.HideButtons();
+        if(SceneManager.GetActiveScene().buildIndex == 11)
+        {
+            StartCoroutine(Endscreen(true));
+        }
         randomOrder = new int[aufgaben.Length];
         for (int i = 0; i < randomOrder.Length; i++)
         {
@@ -244,7 +248,6 @@ public class BossFight : MonoBehaviour
         {
             // Lose
             StartCoroutine(Endscreen(false));
-            trigger.SetActive(false);
         }
         else
         {
