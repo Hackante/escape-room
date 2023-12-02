@@ -8,7 +8,7 @@ public class QuestObject : ScriptableObject
     [SerializeField] private string questName;
     [SerializeField, TextArea] private string questDescription;
     [SerializeField] private Sprite image;
-    [SerializeField] private string answer;
+    [SerializeField] private string[] answers;
     [SerializeField] private Layout layout;
     private List<string> answersGiven = new List<string>();
 
@@ -18,13 +18,29 @@ public class QuestObject : ScriptableObject
     public Layout Layout { get => layout; }
     public List<string> AnswersGiven { get => answersGiven; set => answersGiven = value; }
     public QuestNames saveObjectQuestName;
-    public bool CheckAnswer(string answer) {
+    public bool CheckAnswer(string answer)
+    {
         // Sanitize answer
-        answer = answer.Trim().ToLower();
-        answer = answer.Replace(" ", "");
-        answer = answer.Replace(",", ".");
+        
+        foreach (string possibleAnswer in answers)
+        {
+            if (possibleAnswer.ToLower() == answer)
+            {
+                  answer = answer.Trim().ToLower();
+                  answer = answer.Replace(" ", "");
+                  answer = answer.Replace(",", ".");
+             }
+        }
 
-        // Return true if answer is correct
-        return this.answer == answer;
+        // Check if answer is in the answers array
+        foreach (string possibleAnswer in answers)
+        {
+            if (possibleAnswer.ToLower() == answer)
+            {
+                return true; // Return true if answer is correct
+            }
+        }
+
+        return false; // Return false if answer is incorrect
     }
 }

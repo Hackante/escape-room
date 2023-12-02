@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Visibility : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public GameObject Objekt;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+public void Show()
+{
+Objekt.SetActive(true);
+}
+public void Hide()
+{
+Objekt.SetActive(false);
+}
+
 }
