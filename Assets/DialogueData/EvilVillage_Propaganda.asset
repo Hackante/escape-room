@@ -48,7 +48,7 @@ MonoBehaviour:
     speakerName: Player
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   responses:
-  - responseText: Elfen retten...
+  - responseText: "Video l\xF6schen..."
     dialogueObject: {fileID: 11400000, guid: 581cbd63de90de1499b5f8b9e724cfa9, type: 2}
-  - responseText: Weihnachtsmann retten
+  - responseText: weiter gehen...
     dialogueObject: {fileID: 0}
