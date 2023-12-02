@@ -20,6 +20,11 @@ MonoBehaviour:
     die Formel der Flugbahn in folgender Form an <b>ax^2+bx+c</b> und vereinfache
     diese soweit wie m\xF6glich."
   image: {fileID: 21300000, guid: d932e84dccc5a3c47a06cdd099299491, type: 3}
-  answer: -x^2+10x-16
+  answers:
+  - -x^2+10x-16
+  - -1x^2+10x-16
+  - -1*x^2+10x-16
+  - -1*x^2+10*x-16
+  - -x^2+10*x-16
   layout: 1
   saveObjectQuestName: 6

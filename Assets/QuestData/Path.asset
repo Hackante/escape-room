@@ -17,6 +17,7 @@ MonoBehaviour:
     ihn einfach so zu schieben. Aber mit dem richtigen timing klappt es bestimmt.\n<i>Hinweis:
     Nutze [Leertaste] oder [RechteMaustaste]</i>"
   image: {fileID: 0}
-  answer: 2023
+  answers:
+  - 2023
   layout: 1
   saveObjectQuestName: 4

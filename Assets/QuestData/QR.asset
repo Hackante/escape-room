@@ -17,6 +17,7 @@ MonoBehaviour:
     w\xFCrden dich die Stacheln verletzen. Gib den richitgen Code ein, um sie zu
     deaktivieren."
   image: {fileID: 0}
-  answer: 2376
+  answers:
+  - 2376
   layout: 1
   saveObjectQuestName: 7

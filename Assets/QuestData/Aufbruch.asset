@@ -22,6 +22,10 @@ MonoBehaviour:
     auf der gro\xDFen Tafel aufgehangen. Ermittle die Uhrzeit, zu der es sicher ist,
     den Hafen zu verlassen. Gib das Ergebnis in folgender Form an z.B. : <b>45h-56h</b>.\r"
   image: {fileID: 0}
-  answer: 10h-14h
+  answers:
+  - 10h-14h
+  - 10-14
+  - 10bis14
+  - 10hbis14h
   layout: 1
   saveObjectQuestName: 1
