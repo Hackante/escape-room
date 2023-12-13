@@ -191,4 +191,48 @@ public class SaveLoad : MonoBehaviour
     {
         gameObject.GetComponent<teleport>().SetSceneName(saveObject.CurrentScene < 0 ? 8 : saveObject.CurrentScene);
     }
+
+    public void Reset()
+    {
+        PlayerPrefs.DeleteAll();
+        // reset saveObject
+        Destroy(SaveObject.Instance.gameObject);
+        new GameObject("SaveObject").AddComponent<SaveObject>();
+        DontDestroyOnLoad(SaveObject.Instance.gameObject);
+        SceneManager.LoadScene(0);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void ResetScene() {
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Elfendorf":
+                saveObject.elfendorfPosition = Vector3.zero;
+                saveObject.TaskBrokenBridge = 0;
+                saveObject.TaskBoatOpened = 0;
+                break;
+            case "Ocean":
+                saveObject.ozeanPosition = Vector3.zero;
+                saveObject.TaskHoleFixed = 0;
+                break;
+            case "Evil -Village":
+                saveObject.evilVillagePosition = Vector3.zero;
+                saveObject.PathToEvilVillage = 0;
+                saveObject.VideoTape = 0;
+                break;
+            case "Katakomben":
+                saveObject.katakombenPosition = Vector3.zero;
+                saveObject.Key = 0;
+                saveObject.FirstDoor = 0;
+                saveObject.SecondDoor = 0;
+                saveObject.Tunnels = 0;
+                break;
+        }
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

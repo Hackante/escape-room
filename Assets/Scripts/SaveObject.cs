@@ -1,12 +1,15 @@
+using System;
 using UnityEngine;
 
 public class SaveObject : MonoBehaviour
 {
     public static SaveObject Instance { get; private set; }
     public System.DateTime TimeStarted;
+    public System.DateTime TimeFinished;
+    public int wrongAnswers = 0;
     public int CurrentScene = -1;
-    // Tasks have states (0 = not started, 1 = started, 2 = finished)
 
+    // Tasks have states (0 = not started, 1 = started, 2 = finished)
     // Elfendorf
     public Vector3 elfendorfPosition = new Vector3();
     public int TaskBrokenBridge = 0;
@@ -27,8 +30,7 @@ public class SaveObject : MonoBehaviour
     public int Key = 0;
     public int FirstDoor = 0;
     public int SecondDoor = 0;
-    public int Tunnels = 0;     
-
+    public int Tunnels = 0;
 
     public void Awake()
     {
@@ -49,5 +51,10 @@ public class SaveObject : MonoBehaviour
     {
         var property = GetType().GetField(propertyName);
         property?.SetValue(this, value);
+    }
+
+    public TimeSpan GetTimeElapsed()
+    {
+        return TimeFinished - TimeStarted;
     }
 }

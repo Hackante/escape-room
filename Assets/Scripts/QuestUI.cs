@@ -74,16 +74,12 @@ public class QuestUI : MonoBehaviour
     {
         _inputField.text = string.Empty;
         _questPanel.SetActive(false);
-        // Enable Playermovement
-        // TODO: Fix this
     }
 
     public void Open()
     {
         _footerText.text = "Achtung! Wenn du falsche Antworten gibst, wird dir Strafzeit berechnet.";
         _questPanel.SetActive(true);
-        // Disable Playermovement
-        // TODO: Fix this
     }
 
     public void OnConfirm()
@@ -116,7 +112,7 @@ public class QuestUI : MonoBehaviour
             if(_inputField.text != string.Empty) {
                 if(!_questObject.AnswersGiven.Contains(_inputField.text)) {
                     _questObject.AnswersGiven.Add(_inputField.text);
-                    // TODO: Add penalty
+                    SaveObject.Instance.wrongAnswers++;
                 }
             }
             _inputField.text = string.Empty;

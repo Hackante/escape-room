@@ -12,6 +12,8 @@ public class SettingsPanel : MonoBehaviour
     [SerializeField] private Action _onCloseAction;
     private Settings _settings;
     [SerializeField] private ModalTrigger _modalTrigger;
+    [SerializeField] private ModalTrigger modalTriggerResetScene;
+    [SerializeField] private ModalTrigger modalTriggerResetGame;
     static SettingsPanel _instance;
 
     public static SettingsPanel Instance()
@@ -55,6 +57,8 @@ public class SettingsPanel : MonoBehaviour
     public void Cancel()
     {
         _modalTrigger.enabled = true;
+        modalTriggerResetGame.enabled = false;
+        modalTriggerResetScene.enabled = false;
     }
 
     public void Save()
@@ -63,5 +67,31 @@ public class SettingsPanel : MonoBehaviour
         _settings.SetVolume(_volumeSlider.value);
         _settings.SetInputType(_inputTypeDropdown.value);
         Close();
+    }
+
+    public void ResetScene()
+    {
+        modalTriggerResetScene.enabled = true;
+    }
+
+    public void ResetGame()
+    {
+        modalTriggerResetGame.enabled = true;
+    }
+
+    public void ResetScene(bool reset)
+    {
+        if (reset)
+        {
+            SaveLoad.Instance.ResetScene();
+        }
+    }
+
+    public void ResetGame(bool reset)
+    {
+        if (reset)
+        {
+            SaveLoad.Instance.Reset();
+        }
     }
 }

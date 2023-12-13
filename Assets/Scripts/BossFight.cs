@@ -45,6 +45,7 @@ public class BossFight : MonoBehaviour
     [SerializeField] private string[] endscreenTextWin;
     [SerializeField] private string[] endscreenTextLose;
     [SerializeField] private float delay = 1f;
+    [SerializeField] private TextMeshProUGUI timeDisplay;
 
     private int[] randomOrder;
     private int currentAufgabe = 0;
@@ -61,9 +62,10 @@ public class BossFight : MonoBehaviour
     private void Start()
     {
         ui.HideButtons();
-        if(SceneManager.GetActiveScene().buildIndex == 11)
+        if (SceneManager.GetActiveScene().buildIndex == 11)
         {
             StartCoroutine(Endscreen(true));
+
         }
         randomOrder = new int[aufgaben.Length];
         for (int i = 0; i < randomOrder.Length; i++)
@@ -146,7 +148,7 @@ public class BossFight : MonoBehaviour
 
     public void Fight(int index)
     {
-        foreach(Button button in fights.GetComponentsInChildren<Button>())
+        foreach (Button button in fights.GetComponentsInChildren<Button>())
         {
             button.interactable = false;
         }
@@ -263,6 +265,10 @@ public class BossFight : MonoBehaviour
         yield return new WaitForSeconds(delay);
         if (win)
         {
+            SaveObject.Instance.TimeFinished = System.DateTime.Now;
+            timeDisplay.text = SaveObject.Instance.GetTimeElapsed().ToString(@"hh\:mm\:ss");
+            timeDisplay.text += "\n+ " + SaveObject.Instance.wrongAnswers + " falsche Antworten";
+            timeDisplay.text += "\nGesamt: " + SaveObject.Instance.GetTimeElapsed().Add(new TimeSpan(0, 0, SaveObject.Instance.wrongAnswers * 120)).ToString(@"hh\:mm\:ss");
             StartCoroutine(Fade(endscreenTextWin));
             trigger.SetActive(true);
         }
@@ -305,6 +311,8 @@ public class BossFight : MonoBehaviour
             if (strings.Length > 1)
             {
                 StartCoroutine(Fade(strings[1..]));
+            } else {
+                timeDisplay.gameObject.SetActive(true);
             }
         }
         else

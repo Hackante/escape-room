@@ -44,16 +44,12 @@ public class ReactionGameQuestUI : MonoBehaviour
     public void Close()
     {
         _questPanel.SetActive(false);
-        // Enable Playermovement
-        // TODO: Fix this
     }
 
     public void Open()
     {
         _footerText.text = "Achtung! Wenn du falsche Antworten gibst, wird dir Strafzeit berechnet.";
         _questPanel.SetActive(true);
-        // Disable Playermovement
-        // TODO: Fix this
     }
 
     public void OnConfirm()
