@@ -285,7 +285,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -415, y: -110}
-  m_SizeDelta: {x: 400, y: 1440}
+  m_SizeDelta: {x: 400, y: 2700}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &248017065
 MonoBehaviour:
@@ -318,6 +318,36 @@ MonoBehaviour:
 
 
     External Art
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1751,7 +1781,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 15, y: -110}
-  m_SizeDelta: {x: 850, y: 1440}
+  m_SizeDelta: {x: 850, y: 2700}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &763421033
 MonoBehaviour:
@@ -1774,10 +1804,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Hagen Ecke\nAhmed Gill\nMihailo Drinic\n\nCatarina Georges\nAhmed Gill\nHagen
-    Ecke\n\nszadiart\n    RPG Worlds Caves\n    RPG Worlds - Houses and Interiors\n\nstealthix\n   
-    RPG Nature Tileset - Seasons\n\nzirok\n    Snowy Town Houses Topdown Tileset\n\nBenCreating\r\n   
-    [LPC] Overworld\n\nbluecarrot16\r\n    [LPC] Ship \n\nStendhalGame\r\n    Christmas
-    Tree - (asset modefied)\n\nShane Ivers\n    \"Cutting Edge\" - https://www.silvermansound.com\n\nKevin
+    Ecke\n\nszadiart\n    RPG Worlds Caves\n    RPG Worlds - Houses and Interiors\n   
+    Rogue fantasy catacombs\n\nstealthix\n    RPG Nature Tileset - Seasons\n\nzirok\n   
+    Snowy Town Houses Topdown Tileset\n\nBenCreating\r\n    [LPC] Overworld\n\nbluecarrot16\r\n   
+    [LPC] Ship \n\nStendhalGame\r\n    Christmas Tree - (asset modefied)\n\nZabin,
+    Daniel Cook, yd, Jetrel\r\n    2d Lost Garden Zelda style tiles winter theme
+    with\n    additions\n\nReemax\r\n    [LPC] Signposts, graves, line cloths and
+    scare \n    crow\n    [LPC] House interior and decorations\n\nAntumDeluge\r\n   
+    LPC Wooden Bridge Rework\n\nSharm William.Thompsonj\r\n    [LPC] House Insides\n   
+    [LPC] Clock Animation\n\ncraftpix.net\r\n    XMAS GAME \u2013 FREE GUI\n\nViexgamer\r\n   
+    Rain and Snow 2d Game v1.0\n\nJulien\r\n    Sparkles\n\nARoachIFoundOnMyPillow\r\n16x16
+    Overworld Tiles\n\n\nShane Ivers\n    \"Cutting Edge\" - https://www.silvermansound.com\n\nKevin
     MacLeod\n    \"Holiday Weasel\" - https://incompetech.com\n\nKerstin Kre\xDF"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1955,8 +1992,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -22}
-  m_SizeDelta: {x: 800, y: 55}
+  m_AnchoredPosition: {x: 0, y: -211.91846}
+  m_SizeDelta: {x: 800, y: 434.8369}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1160453140
 MonoBehaviour:
@@ -1978,15 +2015,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Mehr Informationen zu den Lizenzen unter: www.github.com/Hackante/escape-room/#readme
-
-
-    More
-    information about licenses under:
-
-    www.github.com/Hackante/escape-room/#readme
-
-'
+  m_text: "\nMehr Informationen zu den Lizenzen unter: www.github.com/Hackante/escape-room/#readme\n\nMore
+    information about licenses under:\nwww.github.com/Hackante/escape-room/#readme\n\n\xA9 "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
