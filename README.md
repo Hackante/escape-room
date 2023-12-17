@@ -53,15 +53,3 @@ https://szadiart.itch.io/rogue-fantasy-catacombs) - License: *view on [website](
 The music listed below is licensed under a [Creative Commons License](https://creativecommons.org/licenses/), is free to use for non-commercial use, has a public domain license or has been purchased by us. No changes were made to any track.
 - Cutting Edge by Shane Ivers - https://www.silvermansound.com [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 - "Holiday Weasel" by Kevin MacLeod (https://incompetech.com) [![License: CC BY 3.0](https://img.shields.io/badge/License-CC%20BY%203.0-lightgrey.svg)](https://creativecommons.org/licenses/by/3.0/)
-
-Not imported yet:
-- https://szadiart.itch.io/rpg-worlds-houses-and-interiors
-- https://szadiart.itch.io/rogue-fantasy-catacombs
-
-- https://opengameart.org/content/jrpg-chests-16-32-64-and-128px-squared
-- https://opengameart.org/content/lpc-city-inside
-- https://opengameart.org/content/lpc-wooden-furniture
-
-- https://assetstore.unity.com/packages/2d/environments/rogue-fantasy-castle-164725
-- https://assetstore.unity.com/packages/audio/music/rpg-bgm-dungeon-37116
-- https://assetstore.unity.com/packages/audio/music/orchestral/rpg-orchestral-essentials-reborn-free-sample-pack-179920
