@@ -7,14 +7,17 @@ using TMPro;
 public class KeyboardInput : MonoBehaviour
 {
     private TMP_InputField inputField;
-    public GameObject Object;
+    public SetKeyboardInput Object;
     
+    void Awake()
+    {
+       Object = FindObjectOfType<SetKeyboardInput>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {   
         inputField = Object.GetComponent<SetKeyboardInput>().GetInput();
-        inputField.text = "123";
     }
 
     // Update is called once per frame
@@ -25,7 +28,7 @@ public class KeyboardInput : MonoBehaviour
     
     public void Input(string input)
     {
-        inputField.text += "input";
+        inputField.text += input;
     }
 
     public void DeleteInput()

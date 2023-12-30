@@ -2755,6 +2755,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _questPanel: {fileID: 565112793236503346}
   _questObject: {fileID: 0}
+  _playerController: {fileID: 0}
+  _player: {fileID: 0}
   _titleField: {fileID: 2051946200053921471}
   _bodyArea: {fileID: 183341236871413422}
   _verticalLayoutArea: {fileID: 2786718415644098494}

@@ -15,4 +15,13 @@ public void Hide()
 Objekt.SetActive(false);
 }
 
+public void ToggleVisibility(){
+if(Objekt.activeSelf){
+Objekt.SetActive(false);
+}
+else{
+Objekt.SetActive(true);
+}
+
+}
 }
