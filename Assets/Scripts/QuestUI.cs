@@ -37,8 +37,6 @@ public class QuestUI : MonoBehaviour
     [SerializeField] private Button _cancelButton;
     [SerializeField] private TextMeshProUGUI _footerText;
 
-    [SerializeField] private GameObject Keyboard;
-
     [Header("Events")]
     public UnityEvent onContinueCallback;
 
@@ -76,7 +74,6 @@ public class QuestUI : MonoBehaviour
     {
         _inputField.text = string.Empty;
         _questPanel.SetActive(false);
-        Keyboard.SetActive(false);
     }
 
     public void Open()
