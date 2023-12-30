@@ -8,22 +8,12 @@ public class KeyboardInput : MonoBehaviour
 {
     private TMP_InputField inputField;
     public SetKeyboardInput Object;
-    
-    void Awake()
-    {
-       Object = FindObjectOfType<SetKeyboardInput>();
-    }
 
     // Start is called before the first frame update
     void Start()
     {   
+        Object = FindObjectOfType<SetKeyboardInput>();
         inputField = Object.GetComponent<SetKeyboardInput>().GetInput();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     
     public void Input(string input)
