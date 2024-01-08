@@ -24,7 +24,7 @@ MonoBehaviour:
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   - dialogue:
     - <i>Ist das etwa?</i>
-    - GRINCHELBART?! Das muss er in dem Fehrnseher sein!
+    - GRINCHELBART?! Das muss er in dem Fernseher sein!
     speakerName: Player
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   - dialogue:

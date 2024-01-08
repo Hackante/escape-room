@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - dialogue:
-    - "Die Ger\xE4usche werden lauter"
-    - "Die Ger\xE4usche scheinen von links zu kommen"
-    - Ich sollte mal nachschauen
+    - "Die Ger\xE4usche werden lauter."
+    - "Die Ger\xE4usche scheinen von links zu kommen."
+    - Ich sollte mal nachschauen.
     speakerName: Player
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   responses: []

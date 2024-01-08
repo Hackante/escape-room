@@ -15,8 +15,8 @@ MonoBehaviour:
   dialogue:
   - dialogue:
     - HEY, DU DA!!! WER BIST DU!?
-    - "Darkius, ich glaube das ist einer von diesen Schwachk\xF6pfen, die versuchen
-      den Weihnachtsmann zu befreien"
+    - "Darkius, ich glaube, das ist einer von diesen Schwachk\xF6pfen, die versuchen
+      den Weihnachtsmann zu befreien."
     speakerName: NPC ???
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   - dialogue:

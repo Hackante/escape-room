@@ -20,7 +20,7 @@ MonoBehaviour:
     speakerName: System
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   - dialogue:
-    - "Darkeen, du solltest mal Profi Boxer werden\u2026."
+    - "Darkeen, du solltest mal Profi-Boxer werden\u2026."
     speakerName: NPC Darkius
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   responses: []
