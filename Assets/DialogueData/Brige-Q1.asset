@@ -23,7 +23,7 @@ MonoBehaviour:
     speakerName: Player
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   - dialogue:
-    - "Na wenn das so ist, nat\xFCrlich. Aber ich ben\xF6tige im Gegensatz auch deine
+    - "Na wenn das so ist, nat\xFCrlich. Aber ich ben\xF6tige im Gegenzug auch deine
       Hilfe."
     speakerName: NPC Gideon
     speakerColor: {r: 0, g: 0, b: 0, a: 0}

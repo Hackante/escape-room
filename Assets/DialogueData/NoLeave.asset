@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - dialogue:
-    - Ich habe hier noch etwas zu tun. Ich sollte lieber noch nicht gehen
+    - Ich habe hier noch etwas zu tun. Ich sollte lieber noch nicht gehen.
     speakerName: Player
     speakerColor: {r: 0, g: 0, b: 0, a: 0}
   responses: []
